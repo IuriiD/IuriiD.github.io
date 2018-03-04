@@ -20,7 +20,7 @@
 <body>
     <div class="container">
         <p>
-            Updated: 10/02/2018 - v.0.3
+            Updated: 04/03/2018 - v.0.3
         </p>
 
         <p>
@@ -30,7 +30,7 @@
         </p>
 
         <p>
-            Hi! My name is Iurii Dziuban and I'm a starting (as of February 2018) developer (~330 hours learning so far).
+            Hi! My name is Iurii Dziuban and I'm a starting (as of March 2018) developer (~380 hours learning so far).
             <br>My projects can be found in section <a href="#projects">'Projects'</a>.
             <br>I keep a list of courses taken/tutorials covered by me in section <a href="#knowledge">'Knowledge'</a>.
             <br>More details about me and my previous professional biography can be found in <a href="#interests">'Interests/About me'</a>.
@@ -43,14 +43,40 @@
 
         <p>
             <h4><a name="projects">Projects</a></h4>
-            Here are the projects that I’ve done:
+            Here are the projects that I’ve done (the most recent go first):
             <p>
-                <strong><br>Feb 2018 - now: <a href="https://github.com/IuriiD/plotbot">'PlotBot'</a></strong> <a href="http://t.me/MakeMyChartBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://bot.dialogflow.com/plotbot" class="btn btn-success btn-sm" target="_blank">Web Demo</a>
+                <strong><br>March 2018 - now: <a href="https://github.com/IuriiD/common_balance_bot">'CommonBalanceBot'</a></strong>
+                <br>
+                The idea for this training miniproject was suggested by my <a href="https://www.facebook.com/viktor.dziuban">brother</a> who said that it would be nice to have a chatbot that could help to track shared expenses during travels with friends.
+                For example, when one pays for apartment, someone else for dinner, the 3rd one for gas, another food/drinks/tickets etc (as an alternative to chipping in with equal sums each time). At first site this seemed to be a not very difficult task but
+                with all "supportive" functions like creating/deleting transactions log(-s), adding/removing users etc in addition to adding/modifying/deleting payments and showing balance/statement it turned to be not so straightforward for me ;)
+                If in my previous miniproject <a href="https://github.com/IuriiD/plotbot">PlotBot</a> work was ~50% in Dialogflow console and 50% writing plain code, in CommonBalanceBot coding in Python accounts for at least 75% of work.
+                Data is saved in MongoDB.
+                <br>
+                Topics learnt/covered in this project: <i>plain python, MongoDB, dialogflow and telegram/facebook integrations</i>.
+                <div class="row">
+                    <div class="col">
+                      <a href="img/cbb-1.jpg" target="_blank"><img src="img/cbb-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                    </div>
+                    <div class="col">
+                      <a href="img/cbb-2.jpg" target="_blank"><img src="img/cbb-2.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                    </div>
+                    <div class="col">
+                        <a href="img/cbb-3.jpg" target="_blank"><img src="img/cbb-3.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                    </div>
+                </div>
+            </p>
+
+            <hr>
+
+            <p>
+                <strong><br>Feb 2018: <a href="https://github.com/IuriiD/plotbot">'PlotBot'</a></strong> <a href="http://t.me/MakeMyChartBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://bot.dialogflow.com/plotbot" class="btn btn-success btn-sm" target="_blank">Web Demo</a>
                 <br>
                 Learning to build chatbots on <a href="https://dialogflow.com/">dialogflow.com</a> platform I decided to create a PlotBot - a chatbot which builds charts (using <a href="http://pygal.org/en/stable/index.html">pygal</a> python library for charting).
 
                 Entities, intents, contexts, webhooks, integrations and all that. Test this chatbot in <a href="http://t.me/MakeMyChartBot" target="_blank">Telegram</a>, <a href="https://www.facebook.com/messages/t/ChartingBot" target="_blank">Facebook Messenger</a> (waiting for approval) or in a web demo bottom right (click <a href="https://bot.dialogflow.com/plotbot" target="_blank">here</a> to open a bigger window. P.s. Web demo allows text-only communication).
-                Topics learnt/covered in this project: dialogflow, Heroku, pygal, dialogflow and telegram/facebook integration.
+                <br>
+                Topics learnt/covered in this project: <i>dialogflow, Heroku, pygal, dialogflow and telegram/facebook integration</i>.
                 <div class="row">
                     <div class="col">
                       <a href="img/pb-1.jpg" target="_blank"><img src="img/pb-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
@@ -75,7 +101,8 @@
                 My 2nd real miniproject. Done in Jan 2018. A Flask app that tries to determine approximate percentage of fats, carbohydrates and proteins in food by image.
                 Made for fun. Still thinking how to filter non-food images ;) Uses <a href="https://cloud.google.com/vision/">Google Vision API</a> and <a href="http://www.nutritionix.com/api">Nutritionix API</a>.
                 Additionally created a simple <a href="https://bot.dialogflow.com/foodcompositionchatbot">chatbot</a> (see it below on the right) on <a href="https://dialogflow.com/">dialogflow.com</a> platform that can tell fats/carbohydrates/proteins % content for the food user enters (you can also find this chatbot for example in <a href="https://t.me/FoodCompositionBot">telegram</a>).
-                Topics learnt/covered in this project: Flask, REST API (Google Cloud Vision API, Nutrionix API), bootstrap, plot.ly, deployment to server, dialogflow, Heroku.
+                <br>
+                Topics learnt/covered in this project: <i>Flask, REST API (Google Cloud Vision API, Nutrionix API), bootstrap, plot.ly, deployment to server, dialogflow, Heroku</i>.
                 <div class="row">
                     <div class="col">
                       <a href="img/fc-1.jpg" target="_blank"><img src="img/fc-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
@@ -101,7 +128,8 @@
                 Charts (for age & price, price & mileage and age & mileage) are drawn using 2 charting engines/libraries - <a href="http://pygal.org/en/stable/index.html">pygal</a> and <a href="plot.ly">plot.ly</a>.
                 About 50% of time working on this miniproject was spent learning how to create a user management system in Flask (register, login, profile update, password update, password reset, avatar functions).
                 App has a preferences page (accessible for registered and logged in users) where a user can change 2 parameters: adverticements quantity for the model being analyzed (5-50) and the charting engine.
-                Topics learnt/covered in this project: Flask (including user management system), vagrant, git, virtualenv, REST API, requests, JSON parsing, charting (pygal, plot.ly), databases (MongoDB), bootstrap, deployment to server.
+                <br>
+                Topics learnt/covered in this project: <i>Flask</i> (including user management system), <i>vagrant, git, virtualenv, REST API, requests, JSON parsing, charting (pygal, plot.ly), databases (MongoDB), bootstrap, deployment to server</i>.
                 <div class="row">
                     <div class="col">
                       <a href="img/cpam-1.jpg" target="_blank"><img src="img/cpam-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
@@ -123,6 +151,39 @@
             Here I will be posting links to courses/materials/software and other resources that I’ve covered/worked with (last links go first).
             <br><br>
             <p>
+                <a href="http://shorishresearch.com/2014/11/25/installing-mongodb-and-pymongo-on-ubuntu-14-04/">Installing MongoDB and pymongo on Ubuntu 14.04 (Google Cloud VM "chatbots")</a>// mongodb, deployment, ubuntu
+                <br>
+
+                <a href="https://docs.mongodb.com/manual/reference/operator/">Operators — MongoDB Manual 3.6</a> // mongodb
+                <br>
+
+                <a href="https://docs.python.org/3/tutorial/errors.html">8. Errors and Exceptions</a> // python
+                <br>
+
+                <a href="https://dzone.com/articles/using-and-abusing-mongodb">Using (and abusing) MongoDB ObjectIds as created-on Timestamps</a>// mongodb
+                <br>
+
+                <a href="http://www.lexev.org/en/2015/timestamp-objectid-mongodb/">Timestamp and ObjectId in mongoDB</a> // mongodb
+                <br>
+
+                <a href="http://www.dummies.com/programming/databases/storing-data-with-php-flat-file-or-database/">Storing data with php - flat file or database?</a> // python, db
+                <br>
+
+                <a href="https://botmakers.net/chatbot-developers/in/ukraine">Chatbot Developers in Ukraine</a> // chatbot, career
+                <br>
+
+                Building a Chatbot using Telegram and Python (Parts <a href="https://www.codementor.io/garethdwyer/building-a-telegram-bot-using-python-part-1-goi5fncay">1</a>, <a href="https://www.codementor.io/garethdwyer/building-a-chatbot-using-telegram-and-python-part-2-sqlite-databse-backend-m7o96jger">2</a>) // chatbot, python, telegram
+                <br>
+
+                <a href="https://miningbusinessdata.com/dialogflow-api-ai-skype-integration/">Dialogflow (API.AI) Skype integration</a>// chatbot, dialogflow
+                <br>
+
+                <a href="http://sparekh.com/integrating-api-ai-recipe-bot-with-telegram/">Integrating Api.ai Recipe Bot with Telegram</a>// chatbot, dialogflow
+                <br>
+
+                <a href="https://core.telegram.org/bots/api">Telegram Bot API</a> // chatbot, telegram
+                <br>
+
                 <a href="https://design.google/library/ux-ai/">The UX of AI</a> // AI, articles
                 <br>
 
@@ -466,7 +527,7 @@
             <br>
             I would like to be working on problems at the junction of coding and biology, psychology, education but other topics are also welcome.
             <br>
-            I’m married, we have 3 kids (born in 2012, 2014 & 2014), trying to keep balance between work and family/life. Our family/kids blog on <a href="https://www.youtube.com/channel/UCohWank8Tc0f6GocdyXuiPg">Youtube</a>. I like mounting biking – <a href="https://www.strava.com/athletes/20431137">Strava</a>.
+            I’m married, we have 3 kids (born in 2012, 2014 & 2014), trying to keep a healthy balance between work and family/life. Our family/kids blog on <a href="https://www.youtube.com/channel/UCohWank8Tc0f6GocdyXuiPg">Youtube</a>. I like mounting biking – <a href="https://www.strava.com/athletes/20431137">Strava</a>.
         </p>
 
         <hr>
