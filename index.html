@@ -1005,6 +1005,98 @@
             <img src="img/rem-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px">
         </p>
 
+        <p>
+            <br><b>17/05/2018 9:12</b>
+            <br>Planning..
+            <br>1)	"Hello world" on JS (Node.js)
+            <br>2)	Write functions:
+            <br>a.	create_reminder(),
+            <br>b.	delete_reminder(N),
+            <br>c.	clear_all_reminders(),
+            <br>d.	show_all_reminders() # for today
+            <br>e.	confirm_reminder(),
+            <br>f.	snooze_reminder() # change time +X min (for eg., 15min)
+            <br>g.	alert_reminder()
+            <br>3)	Create a bot on Dialogflow (DF), get credentials
+            <br>4)	Communication with DF via API, triggering functions
+                        <br><b>9:30</b>
+            <br>5)	Contexts and dialog flow:
+            <br>a.	INPUT_CONTEXT = []
+            <br>Greeting (Getting started" feature?): Good day [morning/day/evening], <username>. I'm here to keep track of your reminders. What would you like to do next?
+            <br>Buttons:
+            <br>Display my reminders for today
+            <br>Add a reminder
+            <br>Let's talk/Tell me a joke ;) (SmallTalk/etc, optionally)
+            <br>OUTPUT_CONTEXT = []
+            <br>
+            <br>b.	INPUT_CONTEXT = []
+            <br>User clicked "Display my reminders for today"  - trigger show_all_reminders()
+            <br>Buttons:
+            <br>	Add a reminder
+            <br>	Delete reminder
+            <br>Clear all reminders
+            <br>OUTPUT_CONTEXT = [reminders_shown]
+            <br>
+            <br>c.	INPUT_CONTEXT = [reminders_shown]
+            <br>User clicked "Delete reminder" – ask user to enter a reminder number (integer value will be expected from DF)
+            <br>Buttons:
+            <br>	Cancel
+            <br>	Main menu (Display…/Add a reminder/…)
+            <br>OUTPUT_CONTEXT = [which_reminder_to_delete]
+            <br>
+            <br>d.	INPUT_CONTEXT = [which_reminder_to_delete]
+            <br>User entered something
+            <br>Integer number is expected – if not, tell user that's not a number and to ask to repeat + "Cancel" button
+            <br>In range of reminders quantity – if not, tell user that value entered is incorrect and ask to repeat + "Cancel" button
+            <br>If Ok – trigger delete_reminder(N), trigger show_all_reminders() (for today)
+            <br>Buttons:
+            <br>	Add a reminder
+            <br>	Delete reminder
+            <br>Clear all reminders
+            <br>OUTPUT_CONTEXT = []
+            <br>
+            <br>e.	INPUT_CONTEXT = []
+            <br>User clicked "Add a reminder" – ask user smth like "What to remind you about?" sys.any input is expected
+            <br>Buttons:
+            <br>	Main menu (Display…/Add a reminder/…)
+            <br>OUTPUT_CONTEXT = [reminder_content_input]
+            <br>
+            <br>f.	INPUT_CONTEXT = [reminder_content_input]
+            <br>User entered something (anything) – tell smth like "Got it!"
+            <br>Hold reminder content
+            <br>On which date/time should I set this reminder? – date + time input is expected from DF
+            <br>Buttons:
+            <br>Cancel (go to main menu)
+            <br>OUTPUT_CONTEXT = [reminder_time_input]
+            <br>
+            <br>g.	INPUT_CONTEXT = [reminder_time_input]
+            <br>If not correct – "Sorry but that date/time seems to be incorrect. Could you please enter a valid value? Thanks ;)"
+            <br>Buttons:
+            <br>Cancel (go to main menu)
+            <br>OUTPUT_CONTEXT = [reminder_time_input]
+            <br>
+            <br>h.	INPUT_CONTEXT = [reminder_time_input]
+            <br>If date/time Ok - trigger create_reminder(), save data to DB
+            <br>Inform user "A new reminder 'XXXX' for <date/time> was successfully created. What should I do next?"
+            <br>Buttons:
+            <br>Display my reminders for today
+            <br>Add a reminder
+            <br>Let's talk/Tell me a joke ;) (SmallTalk/etc, optionally)
+            <br>OUTPUT_CONTEXT = []
+            <br><b>10:00</b>
+            <br>Draw a paper scheme of actions
+                    <a href="img/rem-2.jpg" target="_blank"><img src="img/rem-2.jpg" class="img-fluid img-thumbnail" style="max-width: 1200px"></a>
+            <br><b>10:30</b>
+            <br>6)	Create a FB page and app, get credentials
+            <br>Backend – FB Messenger interaction
+            <br>
+            <br>Reading
+            <br><a href="https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5">How To Create Your Very Own Facebook Messenger Bot with Dialogflow and Node.js In Just One Day</a>
+            <br><a href="https://chatbotsmagazine.com/building-a-facebook-messenger-bot-using-nodejs-heroku-api-ai-8b53c1102531">Building a Facebook Messenger Bot Using Node.js, Heroku & API.AI</a>
+
+
+        </p>
+
     </div>
 </body>
 </html>
