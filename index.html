@@ -1006,184 +1006,233 @@
         </p>
 
         <p>
-            <br><b>17/05/2018 9:12</b>
-            <br>Planning..
-            <br>
-            <br>1)	"Hello world" on JS (Node.js)
-            <br>2)	Write functions:
-            <br>a.	create_reminder(),
-            <br>b.	delete_reminder(N),
-            <br>c.	clear_all_reminders(),
-            <br>d.	show_all_reminders() # for today
-            <br>e.	confirm_reminder(),
-            <br>f.	snooze_reminder() # change time +X min (for eg., 15min)
-            <br>g.	alert_reminder()
-            <br>3)	Create a bot on Dialogflow (DF), get credentials
-            <br>4)	Communication with DF via API, triggering functions
-            <br>
+            <div class="accordion" id="accordionExample">
 
-            <br><b>9:30</b>
-            <br>5)	Contexts and dialog flow:
-            <br>a.	INPUT_CONTEXT = []
-            <br>Greeting (Getting started" feature?): Good day [morning/day/evening], <username>. I'm here to keep track of your reminders. What would you like to do next?
-            <br>Buttons:
-            <br>Display my reminders for today
-            <br>Add a reminder
-            <br>Let's talk/Tell me a joke ;) (SmallTalk/etc, optionally)
-            <br>OUTPUT_CONTEXT = []
-            <br>
-            <br>b.	INPUT_CONTEXT = []
-            <br>User clicked "Display my reminders for today"  - trigger show_all_reminders()
-            <br>Buttons:
-            <br>	Add a reminder
-            <br>	Delete reminder
-            <br>Clear all reminders
-            <br>OUTPUT_CONTEXT = [reminders_shown]
-            <br>
-            <br>c.	INPUT_CONTEXT = [reminders_shown]
-            <br>User clicked "Delete reminder" – ask user to enter a reminder number (integer value will be expected from DF)
-            <br>Buttons:
-            <br>	Cancel
-            <br>	Main menu (Display…/Add a reminder/…)
-            <br>OUTPUT_CONTEXT = [which_reminder_to_delete]
-            <br>
-            <br>d.	INPUT_CONTEXT = [which_reminder_to_delete]
-            <br>User entered something
-            <br>Integer number is expected – if not, tell user that's not a number and to ask to repeat + "Cancel" button
-            <br>In range of reminders quantity – if not, tell user that value entered is incorrect and ask to repeat + "Cancel" button
-            <br>If Ok – trigger delete_reminder(N), trigger show_all_reminders() (for today)
-            <br>Buttons:
-            <br>	Add a reminder
-            <br>	Delete reminder
-            <br>Clear all reminders
-            <br>OUTPUT_CONTEXT = []
-            <br>
-            <br>e.	INPUT_CONTEXT = []
-            <br>User clicked "Add a reminder" – ask user smth like "What to remind you about?" sys.any input is expected
-            <br>Buttons:
-            <br>	Main menu (Display…/Add a reminder/…)
-            <br>OUTPUT_CONTEXT = [reminder_content_input]
-            <br>
-            <br>f.	INPUT_CONTEXT = [reminder_content_input]
-            <br>User entered something (anything) – tell smth like "Got it!"
-            <br>Hold reminder content
-            <br>On which date/time should I set this reminder? – date + time input is expected from DF
-            <br>Buttons:
-            <br>Cancel (go to main menu)
-            <br>OUTPUT_CONTEXT = [reminder_time_input]
-            <br>
-            <br>g.	INPUT_CONTEXT = [reminder_time_input]
-            <br>If not correct – "Sorry but that date/time seems to be incorrect. Could you please enter a valid value? Thanks ;)"
-            <br>Buttons:
-            <br>Cancel (go to main menu)
-            <br>OUTPUT_CONTEXT = [reminder_time_input]
-            <br>
-            <br>h.	INPUT_CONTEXT = [reminder_time_input]
-            <br>If date/time Ok - trigger create_reminder(), save data to DB
-            <br>Inform user "A new reminder 'XXXX' for <date/time> was successfully created. What should I do next?"
-            <br>Buttons:
-            <br>Display my reminders for today
-            <br>Add a reminder
-            <br>Let's talk/Tell me a joke ;) (SmallTalk/etc, optionally)
-            <br>OUTPUT_CONTEXT = []
-            <br>
-            <br><b>10:00</b>
-            <br>Draw a paper scheme of actions
-            <a href="img/rem-2.jpg" target="_blank"><img src="img/rem-2.jpg" class="img-fluid img-thumbnail" style="max-width: 1200px"></a>
-            <br>
-            <br><b>10:30</b>
-            <br>6)	Create a FB page and app, get credentials
-            <br>Backend – FB Messenger interaction
-            <br>
-            <br>Reading
-            <br><a href="https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5">How To Create Your Very Own Facebook Messenger Bot with Dialogflow and Node.js In Just One Day</a>
-            <br><a href="https://chatbotsmagazine.com/building-a-facebook-messenger-bot-using-nodejs-heroku-api-ai-8b53c1102531">Building a Facebook Messenger Bot Using Node.js, Heroku & API.AI</a>
-            <br>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <b>Day 1, 17/05.2018 (~5:30) - summary</b>
+                    </button>
+                  </h5>
+                </div>
 
-            <br><b>11:00</b>
-            <br>Created a FB Page: <a href="https://www.facebook.com/Remindmebot-191533734823967/">https://www.facebook.com/Remindmebot-191533734823967</a>
-            <br>Created a FB Messenger bot – <b>Remindmebot</b>
-            <br>Generated FB page access token: ####
-            <br>FB App – Callback ULR - https://709fd61d.ngrok.io
-            <br>Verify Token – remindmebot
-            <br>Messages, postbacks
-            <br>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>
+                        <b>Set up a general plan of work and preliminary dialog flow for the bot
+                        <br>Installed node.js, express (+ request, apiai), WebStorm
+                        <br>Got "Hello world" on JS ;)
+                        <br>Created a FB page and app, got FB credentials
+                        <br>Created Dialogflow's agent
+                        <br>Following manual - https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5
+                        <br>Uploaded code to github - https://github.com/IuriiD/remindmebot.git
+                        <br>At the moment messages don't come from FB Messenger to local webhook</b>
+                        <br>
+                        <br>
+                        <br><b>9:12</b>
+                        <br>Planning..
+                        <br>
+                        <br>1)	"Hello world" on JS (Node.js)
+                        <br>2)	Write functions:
+                        <br>a.	create_reminder(),
+                        <br>b.	delete_reminder(N),
+                        <br>c.	clear_all_reminders(),
+                        <br>d.	show_all_reminders() # for today
+                        <br>e.	confirm_reminder(),
+                        <br>f.	snooze_reminder() # change time +X min (for eg., 15min)
+                        <br>g.	alert_reminder()
+                        <br>3)	Create a bot on Dialogflow (DF), get credentials
+                        <br>4)	Communication with DF via API, triggering functions
+                        <br>
 
-            <br><b>11:30</b>
-            <br>Trying to install express.js on Ubunty in Vagrant or on Windows
-            <br>npm install express --save
-            <br>Getting CERT_UNTRUSTED error on Ubuntu
-            <br>https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
-            <br>https://expressjs.com/en/starter/installing.html
-            <br>github - <a href="https://github.com/IuriiD/remindmebot.git">https://github.com/IuriiD/remindmebot.git</a>
-            <br>Bypassing https helped (https://stackoverflow.com/questions/21855035/ssl-error-cert-untrusted-while-using-npm-command?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
-            <br>npm config set strict-ssl false
-            <br>npm install express --save
-            <br>Reading <a href="https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30">“Hello World!” app with Node.js and Express</a>
-            <br>
+                        <br><b>9:30</b>
+                        <br>5)	Contexts and dialog flow:
+                        <br>a.	INPUT_CONTEXT = []
+                        <br>Greeting (Getting started" feature?): Good day [morning/day/evening], <username>. I'm here to keep track of your reminders. What would you like to do next?
+                        <br>Buttons:
+                        <br>Display my reminders for today
+                        <br>Add a reminder
+                        <br>Let's talk/Tell me a joke ;) (SmallTalk/etc, optionally)
+                        <br>OUTPUT_CONTEXT = []
+                        <br>
+                        <br>b.	INPUT_CONTEXT = []
+                        <br>User clicked "Display my reminders for today"  - trigger show_all_reminders()
+                        <br>Buttons:
+                        <br>	Add a reminder
+                        <br>	Delete reminder
+                        <br>Clear all reminders
+                        <br>OUTPUT_CONTEXT = [reminders_shown]
+                        <br>
+                        <br>c.	INPUT_CONTEXT = [reminders_shown]
+                        <br>User clicked "Delete reminder" – ask user to enter a reminder number (integer value will be expected from DF)
+                        <br>Buttons:
+                        <br>	Cancel
+                        <br>	Main menu (Display…/Add a reminder/…)
+                        <br>OUTPUT_CONTEXT = [which_reminder_to_delete]
+                        <br>
+                        <br>d.	INPUT_CONTEXT = [which_reminder_to_delete]
+                        <br>User entered something
+                        <br>Integer number is expected – if not, tell user that's not a number and to ask to repeat + "Cancel" button
+                        <br>In range of reminders quantity – if not, tell user that value entered is incorrect and ask to repeat + "Cancel" button
+                        <br>If Ok – trigger delete_reminder(N), trigger show_all_reminders() (for today)
+                        <br>Buttons:
+                        <br>	Add a reminder
+                        <br>	Delete reminder
+                        <br>Clear all reminders
+                        <br>OUTPUT_CONTEXT = []
+                        <br>
+                        <br>e.	INPUT_CONTEXT = []
+                        <br>User clicked "Add a reminder" – ask user smth like "What to remind you about?" sys.any input is expected
+                        <br>Buttons:
+                        <br>	Main menu (Display…/Add a reminder/…)
+                        <br>OUTPUT_CONTEXT = [reminder_content_input]
+                        <br>
+                        <br>f.	INPUT_CONTEXT = [reminder_content_input]
+                        <br>User entered something (anything) – tell smth like "Got it!"
+                        <br>Hold reminder content
+                        <br>On which date/time should I set this reminder? – date + time input is expected from DF
+                        <br>Buttons:
+                        <br>Cancel (go to main menu)
+                        <br>OUTPUT_CONTEXT = [reminder_time_input]
+                        <br>
+                        <br>g.	INPUT_CONTEXT = [reminder_time_input]
+                        <br>If not correct – "Sorry but that date/time seems to be incorrect. Could you please enter a valid value? Thanks ;)"
+                        <br>Buttons:
+                        <br>Cancel (go to main menu)
+                        <br>OUTPUT_CONTEXT = [reminder_time_input]
+                        <br>
+                        <br>h.	INPUT_CONTEXT = [reminder_time_input]
+                        <br>If date/time Ok - trigger create_reminder(), save data to DB
+                        <br>Inform user "A new reminder 'XXXX' for <date/time> was successfully created. What should I do next?"
+                        <br>Buttons:
+                        <br>Display my reminders for today
+                        <br>Add a reminder
+                        <br>Let's talk/Tell me a joke ;) (SmallTalk/etc, optionally)
+                        <br>OUTPUT_CONTEXT = []
+                        <br>
+                        <br><b>10:00</b>
+                        <br>Draw a paper scheme of actions
+                        <a href="img/rem-2.jpg" target="_blank"><img src="img/rem-2.jpg" class="img-fluid img-thumbnail" style="max-width: 1200px"></a>
+                        <br>
+                        <br><b>10:30</b>
+                        <br>6)	Create a FB page and app, get credentials
+                        <br>Backend – FB Messenger interaction
+                        <br>
+                        <br>Reading
+                        <br><a href="https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5">How To Create Your Very Own Facebook Messenger Bot with Dialogflow and Node.js In Just One Day</a>
+                        <br><a href="https://chatbotsmagazine.com/building-a-facebook-messenger-bot-using-nodejs-heroku-api-ai-8b53c1102531">Building a Facebook Messenger Bot Using Node.js, Heroku & API.AI</a>
+                        <br>
 
-            <br><b>12:00</b>
-            <br>Failing to get 'Hello world' work
-            <br><i>var express = require('express');
-            <br>var app = express();
-            <br>app.get('/', function (req, res) {
-            <br>res.send('Hello World!');
-            <br>});
-            <br>app.listen(3000, function () {
-            <br>console.log('Example app listening on port 3000!');
-            <br>});</i>
-            <br>Didn't work in Ubuntu (in Vagrant on Windows) but works from Windows
-            <br>Getting Cannot GET / error on localhost:3000
-            <br>Installing WebStorm (worked in PyCharm ;)
-            <br>
+                        <br><b>11:00</b>
+                        <br>Created a FB Page: <a href="https://www.facebook.com/Remindmebot-191533734823967/">https://www.facebook.com/Remindmebot-191533734823967</a>
+                        <br>Created a FB Messenger bot – <b>Remindmebot</b>
+                        <br>Generated FB page access token: ####
+                        <br>FB App – Callback ULR - https://709fd61d.ngrok.io
+                        <br>Verify Token – remindmebot
+                        <br>Messages, postbacks
+                        <br>
 
-            <br><b>12:30</b>
-            <br>So:
-            <br>Hello world from manual (https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30 ) works, including via ngrok (https://709fd61d.ngrok.io/)
-            <br>Code from manual (https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5 ) gives Cannot GET / error (localhost:3000, https://709fd61d.ngrok.io/) >> failing to finish NewPageSubscription on FB
+                        <br><b>11:30</b>
+                        <br>Trying to install express.js on Ubunty in Vagrant or on Windows
+                        <br>npm install express --save
+                        <br>Getting CERT_UNTRUSTED error on Ubuntu
+                        <br>https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+                        <br>https://expressjs.com/en/starter/installing.html
+                        <br>github - <a href="https://github.com/IuriiD/remindmebot.git">https://github.com/IuriiD/remindmebot.git</a>
+                        <br>Bypassing https helped (https://stackoverflow.com/questions/21855035/ssl-error-cert-untrusted-while-using-npm-command?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
+                        <br>npm config set strict-ssl false
+                        <br>npm install express --save
+                        <br>Reading <a href="https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30">“Hello World!” app with Node.js and Express</a>
+                        <br>
 
-            <br>
-            <br><b>13:00</b>
-            <br>Article (https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5) seems to be a bit incorrect(?)
-            <br>Following comments, changed
-            <br><i>
-            <br>const express = require('express');
-            <br>const bodyParser = require('body-parser');
-            <br>const app = express();
-            <br>app.use(bodyParser.json());
-            <br>app.use(bodyParser.urlencoded({ extended: true }));
-            <br>app.listen(3000, () => console.log('Webhook server is listening, port 3000'));</i>
-            <br>
-            <br>to
-            <br>
-            <br><i>const express = require('express');
-            <br>const bodyParser = require('body-parser');
-            <br>const app = express();
-            <br>const verificationController = require('./controllers/verification');
-            <br>app.use(bodyParser.json());
-            <br>app.use(bodyParser.urlencoded({ extended: true }));
-            <br>app.get('/', verificationController);
-            <br>app.listen(3000, () => console.log('Webhook server is listening, port 3000'));</i>
-            <br>and NewPageSubscription on FB seems to have succeeded
-            <br>
-            <br>Creating a bot on Dialogflow…
-            <br>Remindmebot
-            <br>Client access  token: ###
-            <br>
-            <br><b>13:43</b>
-            <br>npm install apiai —- save
-            <br>npm install request —- save
-            <br>Stop for today - back to main job
-            <br>
-            <br><b>Summary for the day (~5:30):
-            <br>Wrote general plan of work and dialog flow for the bot
-            <br>Installed node.js, express (+ request, apiai), WebStorm
-            <br>Got "Hello world" on JS using ngrok
-            <br>Created a FB page and app, got FB credentials
-            <br>Created Dialogflow's agent
-            <br>Following manual https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5
-            <br>Uploaded code to github (https://github.com/IuriiD/remindmebot.git)
-            <br>At the moment messages don't come from FB Messenger to local webhook</b>
+                        <br><b>12:00</b>
+                        <br>Failing to get 'Hello world' work
+                        <br><i>var express = require('express');
+                        <br>var app = express();
+                        <br>app.get('/', function (req, res) {
+                        <br>res.send('Hello World!');
+                        <br>});
+                        <br>app.listen(3000, function () {
+                        <br>console.log('Example app listening on port 3000!');
+                        <br>});</i>
+                        <br>Didn't work in Ubuntu (in Vagrant on Windows) but works from Windows
+                        <br>Getting Cannot GET / error on localhost:3000
+                        <br>Installing WebStorm (worked in PyCharm ;)
+                        <br>
+
+                        <br><b>12:30</b>
+                        <br>So:
+                        <br>Hello world from manual (https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30 ) works, including via ngrok (https://709fd61d.ngrok.io/)
+                        <br>Code from manual (https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5 ) gives Cannot GET / error (localhost:3000, https://709fd61d.ngrok.io/) >> failing to finish NewPageSubscription on FB
+
+                        <br>
+                        <br><b>13:00</b>
+                        <br>Article (https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5) seems to be a bit incorrect(?)
+                        <br>Following comments, changed
+                        <br><i>
+                        <br>const express = require('express');
+                        <br>const bodyParser = require('body-parser');
+                        <br>const app = express();
+                        <br>app.use(bodyParser.json());
+                        <br>app.use(bodyParser.urlencoded({ extended: true }));
+                        <br>app.listen(3000, () => console.log('Webhook server is listening, port 3000'));</i>
+                        <br>
+                        <br>to
+                        <br>
+                        <br><i>const express = require('express');
+                        <br>const bodyParser = require('body-parser');
+                        <br>const app = express();
+                        <br>const verificationController = require('./controllers/verification');
+                        <br>app.use(bodyParser.json());
+                        <br>app.use(bodyParser.urlencoded({ extended: true }));
+                        <br>app.get('/', verificationController);
+                        <br>app.listen(3000, () => console.log('Webhook server is listening, port 3000'));</i>
+                        <br>and NewPageSubscription on FB seems to have succeeded
+                        <br>
+                        <br>Creating a bot on Dialogflow…
+                        <br>Remindmebot
+                        <br>Client access  token: ###
+                        <br>
+                        <br><b>13:43</b>
+                        <br>npm install apiai —- save
+                        <br>npm install request —- save
+                        <br>Stop for today - back to main job
+                        <br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Day #2
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                  <div class="card-body">
+                    ...
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Day #3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    ...
+                  </div>
+                </div>
+              </div>
+            </div>
         </p>
 
     </div>
