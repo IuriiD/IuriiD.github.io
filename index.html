@@ -1208,13 +1208,25 @@
                 <div class="card-header" id="headingTwo">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Day #2 - morning, plan for the day
+                        <b>Day 2, 18/05/2018 (~8:00) - summary</b>
                     </button>
                   </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                   <div class="card-body">
-                      Yesterday I also started an intro course on JS on Codeacademy (https://www.codecademy.com/learn/introduction-to-javascript), current progress = 14% (https://www.codecademy.com/gigaWhiz78105)
+                      <b>
+                          Codeacademy beginner's course on JS – <a href="https://www.codecademy.com/gigaWhiz78105">from 14% to 56%</a>
+                          <br>Spent a lot of time (2+ hours) struggling with software:
+                          <br>-	Localhost:3000 in not accessible (failed to fix that; launching server at port 5000);
+                          <br>-	It appeared that what I've installed using "apt-get install node" on Ubuntu is not Node.js – reinstalled that (not from the 1st try ;)
+                          <br>-	Failed to get ngrok working on Ubuntu (but it works from Windows and that's enough for now)
+                          <br>-	Bot recreated according to manual (https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5) (run on port 5000, tunneled using ngrok) still doesn't respond to messages from FB Messenger = at the moment my backend doesn't respond to messages from FB
+                          <br>Wrote several functions on JS for working with mongoDB - createReminder(),checkForDuplicates(), deleteReminder()
+                      </b>
+                      <br>
+                      <br><b>9:25</b>
+                      <br><b>Planning</b>
+                      <br>Yesterday I also started an intro course on JS on Codeacademy (https://www.codecademy.com/learn/introduction-to-javascript), current progress = 14% (https://www.codecademy.com/gigaWhiz78105)
                       <br>
                       <br>Plan for the day. 2 main directions:
                       <br>A)	JS – learn basics and try to write necessary functions (see "2)" from yesterday's plan) and
@@ -1224,6 +1236,62 @@
                       <br>2.	Functions – JS/express and MongoDB
                       <br>3.	Back to chatbot and manual (https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5), achieve at least successful messages exchange between FB Messenger, localhost (or maybe Heroku if unsuccessful) and Dialogflow
                       <br>4.	If #2 and #3 succeed – deploy functions to dialog flow between FBM and backend
+                      <br>
+                      <br><b>10:00</b>
+                      <br>https://www.codecademy.com/learn/introduction-to-javascript - progress 21%
+                      <br>
+                      <br><b>10:30</b>
+                      <br>https://www.codecademy.com/learn/introduction-to-javascript - progress 28%
+                      <br>
+                      <br><b>11:00</b>
+                      <br>https://www.codecademy.com/learn/introduction-to-javascript - progress 35%
+                      <br>
+                      <br><b>11:30</b>
+                      <br>https://www.codecademy.com/learn/introduction-to-javascript - progress 42%
+                      <br>
+                      <br><b>12:05</b>
+                      <br>https://www.codecademy.com/learn/introduction-to-javascript - progress 50%
+                      <br>
+                      <br><b>12:39</b>
+                      <br>https://www.codecademy.com/learn/introduction-to-javascript - progress 56%
+                      <br>Stopped at lesson #8 "Objects"
+                      <br>
+                      <br><b>12:51</b>
+                      <br>Looked through 2 articles on MongoDB and nodejs:
+                      <br>1)	https://closebrace.com/tutorials/2017-03-02/the-dead-simple-step-by-step-guide-for-front-end-developers-to-getting-up-and-running-with-nodejs-express-and-mongodb
+                      <br>2)	https://closebrace.com/tutorials/2017-03-02/creating-a-simple-restful-web-app-with-nodejs-express-and-mongodb
+                      <br>
+                      <br>Reading:
+                      <br>Node.js MongoDB - https://www.w3schools.com/nodejs/nodejs_mongodb.asp
+                      <br>Installed MongoDB
+                      <br>npm install mongodb (on Ubuntu14.04 in VagrantBox on Windows)
+                      <br>Using Mongobooster
+                      <br>
+                      <br><b>14:30</b>
+                      <br>On Day1 I was using node on Windows but want to continue on Ubuntu (as with all my projects) (14.04; in VagrantBox on Win7).
+                      <br>But on Ubuntu after installing Node with "apt-get install node" command "$ node somefile.js" did nothing in shell. It appeared that node installed was wrong
+                      <br>Solution: https://stackoverflow.com/questions/24721182/when-i-run-node-nothing-happens-the-same-with-forever?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+                      <br>(uninstalled node, downloaded 64-bit binary for Linux from http://nodejs.org/download/, added PATH=$PATH:/vagrant/soft/node/bin)
+                      <br>
+                      <br><i>Another local problem:</i>
+                      <br>Can't reach service on 3000 port BUT can on port 5000 (for eg., in my python apps on Flask)
+                      <a href="img/rem-3.jpg" target="_blank"><img src="img/rem-3.jpg" class="img-fluid img-thumbnail" style="max-width: 1200px"></a>
+                      <br>
+                      <br><i>telnet localhost 3000
+                      <br>Trying 127.0.0.1...
+                      <br>telnet: Unable to connect to remote host: Connection refused</i>
+                      <br>
+                      <br><i>lsof -i :3000 -n
+                      <br>COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+                      <br>python  7236 root    4u  IPv4  34677      0t0  TCP *:3000 (LISTEN)</i>
+                      <br>
+                      <br>Windows firewall turned off
+                      <br>Decided to launch chatbot server on port 5000
+                      <br>
+                      <br><b>16:15</b>
+                      <br>Back to MongoDB with JS (https://www.w3schools.com/nodejs/nodejs_mongodb_create_db.asp)
+                      <br>Wrote several functions - createReminder(),checkForDuplicates(),deleteReminder()
+                      <br>25% time spent but moving very slowly :(
                   </div>
                 </div>
               </div>
