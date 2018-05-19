@@ -1299,13 +1299,84 @@
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Day #3
+                        <b>Day 3, 19/05/2018 (~5:00) - summary</b>
                     </button>
                   </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                   <div class="card-body">
-                    ...
+                      <b>
+                          The 3rd day was not very productive:
+                          <br>- finally sorted out with how to properly install nodejs/npm on Ubuntu
+                          <br>- JS/nodejs and MongoDB - wrote 3 functions (nextAlert(), clearAllReminders(), showAllReminders4Today())
+                      </b>
+                      <br>
+                      <br><b>9:02</b>
+                      <br>Plans for the day:
+                      <br>-	Deal with software problems (node/npm, node-mongodb)
+                      <br>-	Continue with functions on js for working with mongodb
+                      <br>-	Another try to get FB M and backend exchange messages
+                      <br>
+                      <br>As I'm still having some problems with node/npm (for eg., getting "SyntaxError: Use of const in strict mode." when executing scripts that work with MongoDB; node v 0.10.25) – decided to reinstall Node.
+                      <br>
+                      <br>How to Install and Use Node.js and npm (Mac, Windows, Linux)
+                      <br>https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/
+                      <br>
+                      <br>On Win7 64bit installed node-v10.1.0-x64.msi
+                      <br>Node 10.1.0
+                      <br>Npm 5.6.0
+                      <br>Seems to be working Ok. But on Win I will also need to install MongoDB. On Ubuntu (in Vagrant) I already have it and also I'm doing all other projects there, so it would be better (and for perspective) to work in Ubuntu. So
+                      <br>
+                      <br>Completly uninstall nodejs, npm and node in ubuntu 14.04
+                      <br>https://stackoverflow.com/questions/32426601/completly-uninstall-nodejs-npm-and-node-in-ubuntu-14-04?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+                      <br>Currently it shows node/nodejs v. 0.10.25, npm v.1.3.10
+                      <br>sudo apt-get remove nodejs
+                      <br>
+                      <br>sudo apt-get remove npm
+                      <br>sudo apt-get update
+                      <br>And then back to article https://www.taniarascia.com/how-to-install-and-use-node-js-and-npm-mac-and-windows/
+                      <br>Installation using Node Version Manager (NVM)
+                      <br>Now using node v10.1.0 (npm v5.6.0)
+                      <br>
+                      <br><b>10:11</b>
+                      <br>Recreate a project
+                      <br>Later will try to configure node interpreter from Vagrant in WebStorm (https://www.jetbrains.com/help/webstorm/configuring-remote-node-interpreters.html) – so far will use WebStorm only for writing code, execution from shell
+                      <br>"dependencies": {
+                      <br>"apiai": "^4.0.3",
+                      <br>"body-parser": "^1.18.3",
+                      <br>"express": "^4.16.3",
+                      <br>"mongodb": "^3.1.0-beta4",
+                      <br>"request": "^2.86.0"
+                      <br>}
+                      <br>Functions for MongoDB seem to be working Ok
+                      <br>
+                      <br><b>10:40</b>
+                      <br>One more quick try to get this working https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5
+                      <br>One more try to get ngrok working on Ubuntu in Vagrant
+                      <br>https://www.npmjs.com/package/ngrok
+                      <br>npm install ngrok and some other variants fail
+                      <br>only this one worked:
+                      <br>https://github.com/inconshreveable/ngrok/issues/429
+                      <br>sudo npm i -g ngrok --unsafe-perm=true --allow-root
+                      <br>https://1627ad0b.ngrok.io
+                      <br>
+                      <br>So,
+                      <br>1)	I'm following the manual https://medium.com/crowdbotics/how-to-create-your-very-own-facebook-messenger-bot-with-dialogflow-and-node-js-in-just-one-day-f5f2f5792be5
+                      <br>2)	My webhook is listening on port 5000, localhost:5000 tunnelled with ngrok to https://1627ad0b.ngrok.io (can be tested in browser)
+                      <br>3)	Messages from FB M still don't come :(
+                      <br>
+                      <br><b>11:40</b>
+                      <br>Back to js and mongodb
+                      <br>
+                      <br><b>15:47</b>
+                      <br>Off-topic: https://da-14.com/blog/python-vs-nodejs-which-better-your-project
+                      <br>
+                      <br><b>19:27</b>
+                      <br>Wrote functions:
+                      <br>nextAlert()
+                      <br>clearAllReminders()
+                      <br>showAllReminders4Today()
+
                   </div>
                 </div>
               </div>
