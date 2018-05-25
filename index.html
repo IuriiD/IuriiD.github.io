@@ -1564,6 +1564,36 @@
                     </div>
                 </div>
 
+                <div class="card">
+                    <div class="card-header" id="headingNine">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <b>Day 9, 25/05/2018 (~9:00) - summary</b>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <b>Plan for the day:</b>
+                            <br>-	Reminders alerting/confirming/snoozing;
+                            <br>-	Bug fixing and improving;
+                            <br>-	Presentation
+                            <br>
+                            <br><b>09:06</b>
+                            <br>Button template is working – found a silly syntax mistake.
+                            <br>
+                            <br><b>18:12 (~9:00)</b>
+                            <br>I did my best to finish a bot with main features requested today but unfortunately failed. Up to 3:00 were spent trying to "promisify" a rather complicated function with nested loops and DB requests. Finally I did that. At this moment RemindMeBot is able to:
+                            <br>-	Add reminders;
+                            <br>-	Remove a chosen reminder;
+                            <br>-	Clear all reminders;
+                            <br>-	Alert reminders (checks are done every 1 minute);
+                            <br>-	Has "Getting started" feature, persistent menu, uses button template.
+                            <br>Confirming/snoozing alerts is left – (buttons are done, their handling is done but I can't get updates to DB. Also text and button responses from the bot are sometimes mixed up though they are presented using promises (need to find out why).
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </p>
 
