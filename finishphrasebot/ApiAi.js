@@ -1,7 +1,3 @@
-// Author: Jaanus Kase (http://jaanus.com/)
-// https://github.com/jaanus/voicebot
-// https://jaanus.com/api-ai-voicebot/
-
 var ApiAi =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

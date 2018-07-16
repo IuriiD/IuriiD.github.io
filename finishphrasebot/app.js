@@ -1,10 +1,3 @@
-// Author: Jaanus Kase (http://jaanus.com/)
-// https://github.com/jaanus/voicebot
-// https://jaanus.com/api-ai-voicebot/
-
-let keys = {};
-try { keys = require("../keys"); } catch (error) { console.log("Keys.js file not found"); }
-
 function isChrome() {
   var isChromium = window.chrome,
     winNav = window.navigator,
@@ -91,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Now we’ve established that the browser is Chrome with proper speech API-s.
 
   // api.ai client
-  const apiClient = new ApiAi.ApiAiClient({accessToken: keys.APIAITOKEN});
+  const apiClient = new ApiAi.ApiAiClient({accessToken: "3c88c31469ed44faa99a8a885ed3f125"}); //
 
   // Initial feedback message.
   addBotItem("Hi! I’m FinishPhraseBot. Tap the microphone and start talking to me.");
@@ -120,6 +113,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       var timer = window.setTimeout(function() { startListening(); }, 5000);
 
       const speech = serverResponse["result"]["fulfillment"]["speech"];
+      console.log(`speech: ${speech}`);
       var msg = new SpeechSynthesisUtterance(speech);
       addBotItem(speech);
       ga('send', 'event', 'Message', 'add', 'bot');
