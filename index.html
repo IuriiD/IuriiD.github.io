@@ -14,7 +14,13 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="shortcut icon" href="img/favicon.ico">
+    <link type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="finishphrasebot/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="finishphrasebot/layout.css" />
+    <script type="text/javascript" src="finishphrasebot/ApiAi.js"></script>
+    <script type="text/javascript" src="finishphrasebot/app.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
@@ -54,8 +60,39 @@
         <p>
             <h4><a name="projects">Projects</a></h4>
             Here are the projects that I’ve done (the most recent go first):
+
             <p>
-                <br><strong>June 2018: <a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS">'FoodCompositionBot v2.0'</a></strong> <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (is reviewed by Facebook since July 01)
+                <br><strong>July 2018: <a name="finishphrasebot" href="https://github.com/IuriiD/finishphrasebot" target="_blank">'FinishPhraseBot'</a></strong>
+                <br>
+                It's more interesting to learn something on practice ;) So learning PostgreSQL I decided to write a simple bot that tells the beginning of a phrase (for eg., of a proverb) and asks user to finish it (Dialogflow + a webhook on Node JS + PostgreSQL hosted on Heroku).
+                But to make this bot a little bit more original I also attached a voice "frontend" written by <a href="https://jaanus.com/api-ai-voicebot/" target="_blank">Jaanus Kase</a>. Give it a try ;)
+                P.s. This bot also understands SQL and the database it works with can be managed through the bot itself (see video).
+            <div class="row">
+                <div class="col">
+                    <iframe width="550" height="400" src="https://www.youtube.com/embed/_aHR_41wHMY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="col">
+                    <div class="app-container">
+                        <div class="app-header"><h1>FinishPhraseBot</h1></div>
+                        <div class="app-content">
+                            <div class="time-indicator"><div class="time-indicator-content">8:20</div><hr /></div>
+                        </div>
+                        <div class="app-footer">
+                            <div class="app-footer-inner">
+                                <div class="mic">
+                                    <div class="ready"><a href="" id="start"><img src="finishphrasebot/i/mic.svg" alt="Tap me to speak" /></a></div>
+                                    <div class="listening"><span class="listening-1">.</span><span class="listening-2">.</span><span class="listening-3">.</span></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </p>
+
+            <p>
+                <br><strong>June 2018: <a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS" target="_blank">'FoodCompositionBot v2.0'</a></strong> <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (is reviewed by Facebook since July 01)
                 <br>
                 FoodCompositionBot is a simple chatbot that analyses food by image (or at least does his best to do that ;) Give it a try by uploading a photo from your camera or photos, posting a link to an image with food or simply typing a food name.
                 This bot was written using NodeJS, <a href="https://cloud.google.com/vision/" target="_blank">Google Vision API</a> for image content analysis, <a href="http://www.nutritionix.com/api" target="_blank">Nutritionix  API</a> as nutrients data source and Facebook Messenger APIs.
@@ -81,7 +118,7 @@
             </p>
 
             <p>
-                <br><strong>March-June 2018 (paused): 'Fellowtraveler-website': <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---website">github</a> / <a href="https://fellowtraveler.club" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> | 'Fellowtraveler-Telegram chatbot': <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot">github</a> / <a href="http://t.me/FellowtravelerBot" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a></strong>
+                <br><strong>March-June 2018 (paused): 'Fellowtraveler-website': <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank">github</a> / <a href="https://fellowtraveler.club" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> | 'Fellowtraveler-Telegram chatbot': <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">github</a> / <a href="http://t.me/FellowtravelerBot" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a></strong>
                 <br>
                 This is supposed to be an entertainment project/social experiment, built on Python using Flask, MongoDB and APIs for GoogleMaps, Dialogflow and messengers (Telegram, Facebook).
                 <br><b><i>Update - 02 June 2018:</i></b> Website and chatbot for Telegram are almost done. Hope to make a version for FB Messenger and launch the project soon.
@@ -100,7 +137,7 @@
             </p>
 
             <p>
-                <strong><br>May 2018: <a name="remindmebot" href="https://github.com/IuriiD/remindmebot">'Remindmebot'</a></strong> <a href="https://www.facebook.com/RemindMeBot/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (so far available for testers only)
+                <strong><br>May 2018: <a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">'Remindmebot'</a></strong> <a href="https://www.facebook.com/RemindMeBot/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (so far available for testers only)
                 <br>
                 On May 16 2018 I visited <a href="https://www.facebook.com/events/177539356217331/" target="_blank">IT Career Day 2018</a> in Cherkasy, a so called "IT-job fairs", which was the 1st event of such type for me. There I spoke with representatives of several companies.
                 Preparing for this event I looked through websites of main companies and came to know that <a href="https://www.facebook.com/master.of.code.team/" target="_blank">Master of Code</a> (MOC) is making chatbots. I had a talk with guys from MOC and they suggested me to
@@ -115,7 +152,7 @@
             </p>
 
             <p>
-                <strong><br>February-March 2018: <a name="sharedexpensesbot" href="https://github.com/IuriiD/shared_expenses_bot">'SharedExpensesBot'</a></strong> <a href="http://t.me/SharedExpensesBot" class="btn btn-success btn-sm" target="_blank">Telegram</a>
+                <strong><br>February-March 2018: <a name="sharedexpensesbot" href="https://github.com/IuriiD/shared_expenses_bot" target="_blank">'SharedExpensesBot'</a></strong> <a href="http://t.me/SharedExpensesBot" class="btn btn-success btn-sm" target="_blank">Telegram</a>
                 <br>
                 The idea for this training miniproject was suggested by my <a href="https://www.facebook.com/viktor.dziuban">brother</a> who said that it would be nice to have a chatbot that could help to track shared expenses during travels with friends.
                 For example, when one pays for apartment, someone else for dinner, the 3rd one for gas, another food/drinks/tickets etc (as an alternative to chipping in with equal sums each time). More detailed information - see <a href="https://github.com/IuriiD/shared_expenses_bot" target="_blank">github</a> or <a href="https://productforums.google.com/forum/#!topic/dialogflow/8fi48meaeAA;context-place=mydiscussions" target="_blank">Dialogflow's forum</a>.
@@ -137,7 +174,7 @@
             <hr>
 
             <p>
-                <strong><br>February 2018: <a name="plotbot" href="https://github.com/IuriiD/plotbot">'PlotBot'</a></strong> <a href="http://t.me/MakeMyChartBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://bot.dialogflow.com/plotbot" class="btn btn-success btn-sm" target="_blank">Web Demo</a>
+                <strong><br>February 2018: <a name="plotbot" href="https://github.com/IuriiD/plotbot" target="_blank">'PlotBot'</a></strong> <a href="http://t.me/MakeMyChartBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://bot.dialogflow.com/plotbot" class="btn btn-success btn-sm" target="_blank">Web Demo</a>
                 <br>
                 Learning to build chatbots on <a href="https://dialogflow.com/">dialogflow.com</a> platform I decided to create a PlotBot - a chatbot which builds charts (using <a href="http://pygal.org/en/stable/index.html">pygal</a> python library for charting).
 
@@ -163,7 +200,7 @@
             <hr>
 
             <p>
-                <strong><br>January-February 2018: <a name="foodcomposition" href="https://github.com/IuriiD/food_composition">'Food Composition'</a></strong> <a href="http://35.204.85.225/" class="btn btn-success btn-sm" target="_blank">Demo</a>
+                <strong><br>January-February 2018: <a name="foodcomposition" href="https://github.com/IuriiD/food_composition" target="_blank">'Food Composition'</a></strong> <a href="http://35.204.85.225/" class="btn btn-success btn-sm" target="_blank">Demo</a>
                 <br>
                 My 2nd real miniproject. Done in Jan 2018. A Flask app that tries to determine approximate percentage of fats, carbohydrates and proteins in food by image.
                 Made for fun. Still thinking how to filter non-food images ;) Uses <a href="https://cloud.google.com/vision/">Google Vision API</a> and <a href="http://www.nutritionix.com/api">Nutritionix API</a>.
@@ -187,7 +224,7 @@
             <hr>
 
             <p>
-                <strong><br> November-December 2017: <a name="car-price-age-mileage" href="https://github.com/IuriiD/car-price-age-mileage">'Car-price-age-mileage'</a></strong> <a href="http://35.227.107.47/" class="btn btn-success btn-sm" target="_blank">Demo</a>
+                <strong><br> November-December 2017: <a name="car-price-age-mileage" href="https://github.com/IuriiD/car-price-age-mileage" target="_blank">'Car-price-age-mileage'</a></strong> <a href="http://35.227.107.47/" class="btn btn-success btn-sm" target="_blank">Demo</a>
                 <br>
                 My 1st real miniproject. Started on 01.11.2017 after learning Python/coding for ~175 hours (3-3.5months) in total, done in ~70 hours.
                 A Flask app that allows user to choose a car model and get scatter charts showing how this car's price is changing depending on its age and mileage.
