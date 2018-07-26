@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <div align="right">
-            <span style="font-size: 12px;">Last updated: 11/07/2018 - v.0.6 [updated monthly]</span>
+            <span style="font-size: 12px;">Last updated: July 11, 2018 [updated monthly] - v.0.6 </span>
         </div>
 
         <div class="row" style="border-color: black">
@@ -69,13 +69,15 @@
                 </b>
             </div>
             <div class="col-sm-10">
-                <div>
-                    Hi! My name is Iurii [ˈjurij'] Dziuban. I'm a self-taught developer and chatbot enthusiast.
+                <div class="alert alert-info">
+                    <b>Hi! My name is Iurii [ˈjurij'] Dziuban. I'm a self-taught developer and chatbot enthusiast.</b>
                     <br>
                     My current tech stack in regard to chatbots looks like this:
-                    <p>
-                        <img src="public/img/stack.jpg" class="img-fluid img-thumbnail" style="max-width: 889px">
-                    </p>
+                </div>
+                <div class="border rounded">
+                    <img src="public/img/stack.jpg" class="img-fluid" style="max-width: 889px">
+                </div>
+                <div>
                     Other things I'm working/worked with: <i>Flask, Github, Heroku etc</i>
                 </div>
             </div>
@@ -83,13 +85,13 @@
 
         <hr>
 
-        <p>
+        <div>
             <h4><a name="projects">Projects</a></h4>
             Here are the projects that I’ve done (the most recent go first):
             <br>
 
-            <p>
-                <br><strong><a name="finishphrasebot" href="https://github.com/IuriiD/finishphrasebot" target="_blank">'FinishPhraseBot'</a></strong> (July 2018) <a href="https://iuriid.github.io/finishphrasebot/" class="btn btn-success btn-sm" target="_blank">Web Demo</a> <a href="https://github.com/IuriiD/finishphrasebot" class="btn btn-secondary btn-sm" target="_blank">Github</a>
+            <div class="border rounded p-3">
+                <strong><a name="finishphrasebot" href="https://github.com/IuriiD/finishphrasebot" target="_blank">'FinishPhraseBot'</a></strong> <a href="https://iuriid.github.io/finishphrasebot/" class="btn btn-success btn-sm" target="_blank">Web Demo</a> <a href="https://github.com/IuriiD/finishphrasebot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (July 2018)
                 <br>
                 <a href="public/img/finishphrasebot-stack.png" target="_blank"><img src="public/img/finishphrasebot-stack.png" class="img-fluid"></a>
                 <br>
@@ -97,88 +99,89 @@
                 It uses Dialogflow for conversation construction with webhooks on Node JS, and PostgreSQL for storing questions. But to make this bot a little bit more original I also attached a voice "frontend" written by <a href="https://jaanus.com/api-ai-voicebot/" target="_blank">Jaanus Kase</a>.
                 Give it a try ;) (works in Chrome for desctop or Android; as the webhook is hosted on Heroku and goes to sleeping mode in 30 min if not used, so the 1st response may take some time or may be empty).
                 <br>P.s. This bot also understands SQL and the database it works with can be managed through the bot itself (see video; I won't provide the link to the text-only version of this bot though ;)).
-            <div class="row">
-                <div class="col">
-                    <iframe width="550" height="400" src="https://www.youtube.com/embed/XUBmuL8QgQM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <div class="col" style="max-height: 400px">
-                    <div class="app-container" style="max-height: 600px">
-                        <div class="app-header"><h1>FinishPhraseBot</h1></div>
-                        <div class="app-content">
-                            <div class="time-indicator"><div class="time-indicator-content">8:20</div><hr /></div>
-                        </div>
-                        <div class="app-footer">
-                            <div class="app-footer-inner">
-                                <div class="mic">
-                                    <div class="ready"><a href="" id="start"><img src="stuff/finishphrasebot/i/mic.svg" alt="Tap me to speak" /></a></div>
-                                    <div class="listening"><span class="listening-1">.</span><span class="listening-2">.</span><span class="listening-3">.</span></div>
-                                </div>
+                <div class="row">
+                    <div class="col p-3">
+                        <iframe width="550" height="400" src="https://www.youtube.com/embed/XUBmuL8QgQM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="col" style="max-height: 445px">
+                        <div class="app-container" style="max-height: 600px">
+                            <div class="app-header"><h1>FinishPhraseBot</h1></div>
+                            <div class="app-content">
+                                <div class="time-indicator"><div class="time-indicator-content">8:20</div><hr /></div>
+                            </div>
+                            <div class="app-footer">
+                                <div class="app-footer-inner">
+                                    <div class="mic">
+                                        <div class="ready"><a href="" id="start"><img src="stuff/finishphrasebot/i/mic.svg" alt="Tap me to speak" /></a></div>
+                                        <div class="listening"><span class="listening-1">.</span><span class="listening-2">.</span><span class="listening-3">.</span></div>
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </p>
 
-            <hr>
+            <br>
 
-            <p>
-                <br><strong><a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS" target="_blank">'FoodCompositionBot v2.0'</a></strong> (June 2018) <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (is reviewed by Facebook since July 01) <a href="https://github.com/IuriiD/food_composition_chatbot_JS" class="btn btn-secondary btn-sm" target="_blank">Github</a>
+            <div class="border rounded p-3">
+                <strong><a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS" target="_blank">'FoodCompositionBot v2.0'</a></strong> <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (is reviewed by Facebook since July 01) <a href="https://github.com/IuriiD/food_composition_chatbot_JS" class="btn btn-secondary btn-sm" target="_blank">Github</a> (June 2018)
                 <br>
                 <a href="public/img/foodcompbotjs-stack.png" target="_blank"><img src="public/img/foodcompbotjs-stack.png" class="img-fluid"></a>
-                <br>
-
-                FoodCompositionBot is a simple chatbot that analyses food by image (or at least does his best to do that ;) Give it a try by uploading a photo from your camera or photos, posting a link to an image with food or simply typing a food name.
-                This bot was written using NodeJS, <a href="https://cloud.google.com/vision/" target="_blank">Google Vision API</a> for image content analysis, <a href="http://www.nutritionix.com/api" target="_blank">Nutritionix  API</a> as nutrients data source and Facebook Messenger APIs.
+                <div>
+                    FoodCompositionBot is a simple chatbot that analyses food by image (or at least does his best to do that ;) Give it a try by uploading a photo from your camera or photos, posting a link to an image with food or simply typing a food name.
+                    This bot was written using NodeJS, <a href="https://cloud.google.com/vision/" target="_blank">Google Vision API</a> for image content analysis, <a href="http://www.nutritionix.com/api" target="_blank">Nutritionix  API</a> as nutrients data source and Facebook Messenger APIs.
+                </div>
                 <div class="row">
                     <div class="col">
-                      <iframe width="730" height="440" src="https://www.youtube.com/embed/GR9-m8wm-hw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      <iframe width="707" height="435" src="https://www.youtube.com/embed/GR9-m8wm-hw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                     <div class="col">
-                      <a href="public/img/fcjs-1.jpg" target="_blank"><img src="public/img/fcjs-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/fcjs-1.jpg" target="_blank"><img src="public/img/fcjs-1.jpg" class="img-fluid img-thumbnail" style="max-width: 330px"></a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="public/img/fcjs-2.jpg" target="_blank"><img src="public/img/fcjs-2.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                        <a href="public/img/fcjs-2.jpg" target="_blank"><img src="public/img/fcjs-2.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                        <a href="public/img/fcjs-3.jpg" target="_blank"><img src="public/img/fcjs-3.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                        <a href="public/img/fcjs-3.jpg" target="_blank"><img src="public/img/fcjs-3.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                        <a href="public/img/fcjs-4.jpg" target="_blank"><img src="public/img/fcjs-4.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                        <a href="public/img/fcjs-4.jpg" target="_blank"><img src="public/img/fcjs-4.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                 </div>
-            </p>
+            </div>
 
-            <hr>
+            <br>
 
-            <p>
-                <br><strong><a href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank">'Fellowtraveler-website'</a> <a href="https://fellowtraveler.club" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Telegram chatbot'</a> <a href="http://t.me/FellowtravelerBot" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Facebook chatbot'</a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---FBMessengerChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a></strong> <br>(March-June 2018 [project paused])
+            <div class="border rounded p-3">
+                <strong><a href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank">'Fellowtraveler-website'</a> <a href="https://fellowtraveler.club" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Telegram chatbot'</a> <a href="http://t.me/FellowtravelerBot" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Facebook chatbot'</a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---FBMessengerChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a></strong> <br>(March-June 2018 [<b>project paused</b>])
                 <br>
                 <a href="public/img/teddygo-stack.jpg" target="_blank"><img src="public/img/teddygo-stack.jpg" class="img-fluid"></a>
                 <br>
                 This is supposed to be an entertainment project/social experiment, built on Python using Flask, MongoDB and APIs for GoogleMaps, Dialogflow and messengers (Telegram, Facebook).
                 <br><b><i>Update - 02 June 2018:</i></b> Website and chatbot for Telegram are almost done. Hope to make a version for FB Messenger and launch the project soon.
                 <br><b><i>Update - 11 July 2018:</i></b> Due to other training tasks with higher priority I had to pause work on this project (but still hope to finish it and launch). Website and Telegram bot are almost ready, Facebook bot is ready for ~80%.
+                <br><br>
                 <div class="row">
                     <div class="col">
-                      <a href="public/img/ft-5.jpg" target="_blank"><img src="public/img/ft-5.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/ft-5.jpg" target="_blank"><img src="public/img/ft-5.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                      <a href="public/img/ft-6.jpg" target="_blank"><img src="public/img/ft-6.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/ft-6.jpg" target="_blank"><img src="public/img/ft-6.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                        <a href="public/img/ft-2.jpg" target="_blank"><img src="public/img/ft-2.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                        <a href="public/img/ft-2.jpg" target="_blank"><img src="public/img/ft-2.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                 </div>
-            </p>
+            </div>
 
-            <hr>
+            <br>
 
-            <p>
-                <strong><br><a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">'Remindmebot'</a></strong> <a href="https://www.facebook.com/RemindMeBot/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (available for testers only) <a href="https://github.com/IuriiD/remindmebot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (May 2018)
+            <div class="border rounded p-3">
+                <strong><a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">'Remindmebot'</a></strong> <a href="https://www.facebook.com/RemindMeBot/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (available for testers only) <a href="https://github.com/IuriiD/remindmebot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (May 2018)
                 <br>
                 <a href="public/img/remindmebot-stack.png" target="_blank"><img src="public/img/remindmebot-stack.png" class="img-fluid"></a>
                 <br>
@@ -187,17 +190,18 @@
                 fulfill a test task writing a bot on node.js. I took this challenge. Though all my previous projects were on Python, I never coded on Javascript before and in general up to 3/4 of instruments used in this project were new for me, I seem to have coped with
                 the task. You can read a bit more about how I made the way from my first "Hello world" on JS to writing and launching <a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">Remindmebot</a> in 60 hours <a href="stuff/remindmebot/remindmebot.html">here</a>.
                 <br>About this chatbot: it's a bot-reminder written on Node.js using Dialogflow and Facebook Messenger APIs and MongoDB. It can create reminders using NLU (for example it can understand phrases like "Remind me to go cycling at 7:00 on Mondays, Wednesdays and Fridays"), delete all or one specific reminder and alert reminders which can be "confirmed" or "snoozed".
+                <br>
                 <div class="row">
                     <div class="col">
-                      <a href="public/img/rem-10.jpg" target="_blank"><img src="public/img/rem-10.jpg" class="img-fluid img-thumbnail" style="max-width: 1100px"></a>
+                      <a href="public/img/rem-10.jpg" target="_blank"><img src="public/img/rem-10.jpg" class="img-fluid img-thumbnail" style="max-width: 1080px"></a>
                     </div>
                 </div>
-            </p>
+            </div>
 
-            <hr>
+            <br>
 
-            <p>
-                <strong><br><a name="sharedexpensesbot" href="https://github.com/IuriiD/shared_expenses_bot" target="_blank">'SharedExpensesBot'</a></strong> <a href="http://t.me/SharedExpensesBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://github.com/IuriiD/shared_expenses_bot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (February-March 2018)
+            <div class="border rounded p-3">
+                <strong><a name="sharedexpensesbot" href="https://github.com/IuriiD/shared_expenses_bot" target="_blank">'SharedExpensesBot'</a></strong> <a href="http://t.me/SharedExpensesBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://github.com/IuriiD/shared_expenses_bot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (February-March 2018)
                 <br>
                 <a href="public/img/sharedexpensesbot-stack.png" target="_blank"><img src="public/img/sharedexpensesbot-stack.png" class="img-fluid"></a>
                 <br>
@@ -207,21 +211,21 @@
                 Topics learnt/covered in this project: <i>plain python, MongoDB, dialogflow and telegram/facebook integrations</i>.
                 <div class="row">
                     <div class="col">
-                      <a href="public/img/cbb-2.jpg" target="_blank"><img src="public/img/cbb-2.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/cbb-2.jpg" target="_blank"><img src="public/img/cbb-2.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                      <a href="public/img/cbb-3.jpg" target="_blank"><img src="public/img/cbb-3.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/cbb-3.jpg" target="_blank"><img src="public/img/cbb-3.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                        <a href="public/img/cbb-4.jpg" target="_blank"><img src="public/img/cbb-4.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                        <a href="public/img/cbb-4.jpg" target="_blank"><img src="public/img/cbb-4.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                 </div>
-            </p>
+            </div>
 
-            <hr>
+            <br>
 
-            <p>
-                <strong><br><a name="plotbot" href="https://github.com/IuriiD/plotbot" target="_blank">'PlotBot'</a></strong> <a href="http://t.me/MakeMyChartBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://bot.dialogflow.com/plotbot" class="btn btn-success btn-sm" target="_blank">Web Demo</a> <a href="https://github.com/IuriiD/plotbot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (February 2018)
+            <div class="border rounded p-3">
+                <strong><a name="plotbot" href="https://github.com/IuriiD/plotbot" target="_blank">'PlotBot'</a></strong> <a href="http://t.me/MakeMyChartBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://bot.dialogflow.com/plotbot" class="btn btn-success btn-sm" target="_blank">Web Demo</a> <a href="https://github.com/IuriiD/plotbot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (February 2018)
                 <br>
                 <a href="public/img/plotbot-stack.png" target="_blank"><img src="public/img/plotbot-stack.png" class="img-fluid"></a>
 
@@ -233,25 +237,28 @@
                 Topics learnt/covered in this project: <i>dialogflow, Heroku, pygal, dialogflow and telegram/facebook integration</i>.
                 <div class="row">
                     <div class="col">
-                      <a href="public/img/pb-1.jpg" target="_blank"><img src="public/img/pb-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/pb-1.jpg" target="_blank"><img src="public/img/pb-1.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                      <a href="public/img/pb-2.jpg" target="_blank"><img src="public/img/pb-2.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/pb-2.jpg" target="_blank"><img src="public/img/pb-2.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                        <a href="public/img/pb-3.jpg" target="_blank"><img src="public/img/pb-3.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                        <a href="public/img/pb-3.jpg" target="_blank"><img src="public/img/pb-3.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                         <br>
                         <br>
-                        <iframe width="350" height="397" src="https://console.dialogflow.com/api-client/demo/embedded/plotbot"></iframe>
+                        <iframe width="335" height="380" src="https://console.dialogflow.com/api-client/demo/embedded/plotbot"></iframe>
                     </div>
                 </div>
-            </p>
+            </div>
 
-            <hr>
-            <h4>Other, non-chatbot projects</h4>
+            <br>
 
-            <p>
-                <strong><br><a name="foodcomposition" href="https://github.com/IuriiD/food_composition" target="_blank">'Food Composition'</a></strong> <a href="http://35.204.85.225/" class="btn btn-success btn-sm" target="_blank">Demo</a> <a href="https://github.com/IuriiD/food_composition" class="btn btn-secondary btn-sm" target="_blank">Github</a> (January-February 2018)
+            <div>
+                <h4>Other, non-chatbot projects</h4>
+            </div>
+
+            <div class="border rounded p-3">
+                <strong><a name="foodcomposition" href="https://github.com/IuriiD/food_composition" target="_blank">'Food Composition'</a></strong> <a href="http://35.204.85.225/" class="btn btn-success btn-sm" target="_blank">Demo</a> <a href="https://github.com/IuriiD/food_composition" class="btn btn-secondary btn-sm" target="_blank">Github</a> (January-February 2018)
                 <br>
                 My 2nd real miniproject. Done in Jan 2018. A Flask app that tries to determine approximate percentage of fats, carbohydrates and proteins in food by image.
                 Made for fun. Still thinking how to filter non-food images ;) Uses <a href="https://cloud.google.com/vision/">Google Vision API</a> and <a href="http://www.nutritionix.com/api">Nutritionix API</a>.
@@ -260,22 +267,22 @@
                 Topics learnt/covered in this project: <i>Flask, REST API (Google Cloud Vision API, Nutritionix API), bootstrap, plot.ly, deployment to server, dialogflow, Heroku</i>.
                 <div class="row">
                     <div class="col">
-                      <a href="public/img/fc-1.jpg" target="_blank"><img src="public/img/fc-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/fc-1.jpg" target="_blank"><img src="public/img/fc-1.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                      <a href="public/img/fc-2.jpg" target="_blank"><img src="public/img/fc-2.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/fc-2.jpg" target="_blank"><img src="public/img/fc-2.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                        <iframe width="350" height="518" src="https://console.dialogflow.com/api-client/demo/embedded/foodcompositionchatbot"></iframe>
-                        <!--a href="img/fc-3.jpg" target="_blank"><img src="img/fc-3.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a-->
+                        <iframe width="335" height="500" src="https://console.dialogflow.com/api-client/demo/embedded/foodcompositionchatbot"></iframe>
+
                     </div>
                 </div>
-            </p>
+            </div>
 
-            <hr>
+            <br>
 
-            <p>
-                <strong><br><a name="car-price-age-mileage" href="https://github.com/IuriiD/car-price-age-mileage" target="_blank">'Car-price-age-mileage'</a></strong> <a href="http://35.227.107.47/" class="btn btn-success btn-sm" target="_blank">Demo</a> <a href="https://github.com/IuriiD/car-price-age-mileage" class="btn btn-secondary btn-sm" target="_blank">Github</a> (November-December 2017)
+            <div class="border rounded p-3">
+                <strong><a name="car-price-age-mileage" href="https://github.com/IuriiD/car-price-age-mileage" target="_blank">'Car-price-age-mileage'</a></strong> <a href="http://35.227.107.47/" class="btn btn-success btn-sm" target="_blank">Demo</a> <a href="https://github.com/IuriiD/car-price-age-mileage" class="btn btn-secondary btn-sm" target="_blank">Github</a> (November-December 2017)
                 <br>
                 My 1st real miniproject. Started on 01.11.2017 after learning Python/coding for ~175 hours (3-3.5months) in total, done in ~70 hours.
                 A Flask app that allows user to choose a car model and get scatter charts showing how this car's price is changing depending on its age and mileage.
@@ -287,21 +294,21 @@
                 Topics learnt/covered in this project: <i>Flask</i> (including creation of user management system), <i>vagrant, git, virtualenv, REST API, requests, JSON parsing, charting (pygal, plot.ly), MongoDB, bootstrap, deployment to server</i>.
                 <div class="row">
                     <div class="col">
-                      <a href="public/img/cpam-1.jpg" target="_blank"><img src="public/img/cpam-1.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/cpam-1.jpg" target="_blank"><img src="public/img/cpam-1.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                      <a href="public/img/cpam-2.jpg" target="_blank"><img src="public/img/cpam-2.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/cpam-2.jpg" target="_blank"><img src="public/img/cpam-2.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                     <div class="col">
-                      <a href="public/img/cpam-3.jpg" target="_blank"><img src="public/img/cpam-3.jpg" class="img-fluid img-thumbnail" style="max-width: 350px"></a>
+                      <a href="public/img/cpam-3.jpg" target="_blank"><img src="public/img/cpam-3.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
                     </div>
                 </div>
-            </p>
-        </p>
+            </div>
+        </div>
 
         <hr>
 
-        <p>
+        <div>
             <h4><a name="knowledge">Knowledge</a></h4>
             Here I will be posting links to courses/materials/software and other resources that I’ve covered/worked with (last links go first).
             <br>
@@ -1262,7 +1269,7 @@
 
                 <a href="https://www.codecademy.com/gigaWhiz78105">“Learn Python” course - codecademy.com</a> // python
             </p>
-        </p>
+        </div>
 
         <hr>
 
