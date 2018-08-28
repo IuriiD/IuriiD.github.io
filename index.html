@@ -31,7 +31,7 @@
         body {font-family:  'Open Sans', 'Verdana', sans-serif; font-size: 15px;}
     </style>
 
-    <title>Iurii Dziuban - chatbot development</title>
+    <title>Iurii Dziuban - Chatbot Development</title>
 
     <!-- JavaScript (Bootstrap etc) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <div align="right">
-            <span style="font-size: 12px;">Last updated: July 11, 2018 [updated monthly] - v.0.6 </span>
+            <span style="font-size: 12px;">Last updated: August 28, 2018 [updated monthly] - v.0.6 </span>
         </div>
 
         <div class="row" style="border-color: black">
@@ -75,10 +75,10 @@
                     My current tech stack in regard to chatbots looks like this:
                 </div>
                 <div class="container border rounded">
-                    <img src="public/img/stack.jpg" class="img-fluid" width="889px" height="467px">
+                    <img src="public/img/stack.jpg" class="img-fluid" width="889px" height="524px">
                 </div>
                 <div>
-                    Other things I'm working/worked with: <i>Flask, Github, Heroku etc</i>
+                    Other things I'm working/worked with: <i>Flask, Github, Heroku, AWS Lambda/S3 etc</i>
                 </div>
             </div>
         </div>
@@ -88,6 +88,44 @@
         <div>
             <h4><a name="projects">Projects</a></h4>
             Here are the projects that I’ve done (the most recent go first):
+            <br>
+
+            <div class="border rounded p-3">
+                <strong><a name="guesstheplacebot" href="https://github.com/IuriiD/guess_the_place_bot_JS" target="_blank">'GuessThePlaceBot'</a></strong> <a href="https://t.me/GuessThePlaceBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://github.com/IuriiD/guess_the_place_bot_JS" class="btn btn-secondary btn-sm" target="_blank">Github</a>  (August 2018)
+                <br>
+                <a href="public/img/gtpb-stack.png" target="_blank"><img src="public/img/gtpb-stack.png" class="img-fluid"></a>
+                <br>
+                Do you know your city well? Can you recognize its places by street view photos? Play a game with <b><a href="https://t.me/GuessThePlaceBot" target="_blank">GuessThePlaceBot</a></b> and check that ;)
+                This is a Telegram bot that asks to identify places in a chosen city by Google Street View images.
+                Built using NodeJS for bot logic, Telegram Bot API (<a href="https://github.com/telegraf/telegraf" target="_blank">Telegraf</a> wrapper), hosted on AWS Lambda
+                [@todo: add PostgreSQL for storing data].
+                <br><b>Note:</b> Doesn't work on Telegram Desktop or Telegram for Web (platforms limitation - don't allow to send location)
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <iframe width="340" height="220" src="https://www.youtube.com/embed/wnC-QVKlDUw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="col">
+                        <a href="public/img/gtpb-1.jpg" target="_blank"><img src="public/img/gtpb-1.jpg" class="img-fluid img-thumbnail" style="max-width: 330px"></a>
+                    </div>
+                    <div class="col">
+                        <a href="public/img/gtpb-2.jpg" target="_blank"><img src="public/img/gtpb-2.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a href="public/img/gtpb-3.jpg" target="_blank"><img src="public/img/gtpb-3.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
+                    </div>
+                    <div class="col">
+                        <a href="public/img/gtpb-4.jpg" target="_blank"><img src="public/img/gtpb-4.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
+                    </div>
+                    <div class="col">
+                        <a href="public/img/gtpb-5.jpg" target="_blank"><img src="public/img/gtpb-5.jpg" class="img-fluid img-thumbnail" style="max-width: 335px"></a>
+                    </div>
+                </div>
+            </div>
+
             <br>
 
             <div class="border rounded p-3">
@@ -126,7 +164,7 @@
             <br>
 
             <div class="border rounded p-3">
-                <strong><a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS" target="_blank">'FoodCompositionBot v2.0'</a></strong> <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (is reviewed by Facebook since July 01) <a href="https://github.com/IuriiD/food_composition_chatbot_JS" class="btn btn-secondary btn-sm" target="_blank">Github</a> (June 2018)
+                <strong><a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS" target="_blank">'FoodCompositionBot v2.0'</a></strong> <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> <b>(is reviewed by Facebook since July 01)</b> <a href="https://github.com/IuriiD/food_composition_chatbot_JS" class="btn btn-secondary btn-sm" target="_blank">Github</a> (June 2018)
                 <br>
                 <a href="public/img/foodcompbotjs-stack.png" target="_blank"><img src="public/img/foodcompbotjs-stack.png" class="img-fluid"></a>
                 <div>
@@ -181,7 +219,7 @@
             <br>
 
             <div class="border rounded p-3">
-                <strong><a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">'Remindmebot'</a></strong> <a href="https://www.facebook.com/RemindMeBot/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (available for testers only) <a href="https://github.com/IuriiD/remindmebot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (May 2018)
+                <strong><a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">'Remindmebot'</a></strong> <a href="https://www.facebook.com/RemindMeBot/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (not public, available for testers only) <a href="https://github.com/IuriiD/remindmebot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (May 2018)
                 <br>
                 <a href="public/img/remindmebot-stack.png" target="_blank"><img src="public/img/remindmebot-stack.png" class="img-fluid"></a>
                 <br>
@@ -190,6 +228,7 @@
                 fulfill a test task writing a bot on node.js. I took this challenge. Though all my previous projects were on Python, I never coded on Javascript before and in general up to 3/4 of instruments used in this project were new for me, I seem to have coped with
                 the task. You can read a bit more about how I made the way from my first "Hello world" on JS to writing and launching <a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">Remindmebot</a> in 60 hours <a href="stuff/remindmebot/remindmebot.html">here</a>.
                 <br>About this chatbot: it's a bot-reminder written on Node.js using Dialogflow and Facebook Messenger APIs and MongoDB. It can create reminders using NLU (for example it can understand phrases like "Remind me to go cycling at 7:00 on Mondays, Wednesdays and Fridays"), delete all or one specific reminder and alert reminders which can be "confirmed" or "snoozed".
+                <br>
                 <br>
                 <div class="row">
                     <div class="col">
@@ -314,6 +353,122 @@
             <br>
             <p>
                 <div>
+
+                    <div>
+                        <div class="row">
+                            <div class="col bg-success text-white">
+                                <br>
+                                Project "<a href="#guesstheplacebot" style="color: white;"><b>GuessThePlaceBot</b></a>" - STILL IN DEVELOPMENT (27/08/2018)
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col border border-success">
+                                <a href="https://github.com/telegraf/telegraf">Telegraf - Telegram bot framework for Node.js</a> // chatbot, node, telegraf
+                                <br>
+
+                                <a href="https://hackernoon.com/serverless-telegram-bot-on-aws-lambda-851204d4236c">Serverless Telegram bot on AWS Lambda</a> // chatbot, aws lambda
+                                <br>
+
+                                <a href="https://aws.amazon.com/rds/postgresql/">Amazon RDS for PostgreSQL</a> // amazon, postgresql, aws rds
+                                <br>
+
+                                <a href="https://developers.google.com/maps/documentation/streetview/intro">Google Street View - Developer Guide</a> // google, street view
+                                <br>
+
+                                <a href="https://kinsta.com/blog/google-cloud-vs-aws/">Google Cloud vs AWS in 2018 (Comparing the Giants)</a> // cloud computing, google, aws
+                                <br>
+
+                                <a href="https://github.com/claudiajs/claudia-bot-builder">Claudia Bot Builder - easy deployment to AWS Lambda</a> // claudia, aws lambda
+                                <br>
+
+                                <a href="https://chatbotsmagazine.com/the-ultimate-guide-to-designing-a-chatbot-tech-stack-333eceb431da">The Ultimate Guide To Designing A Chatbot Tech Stack</a> // chatbot, stack
+                                <br>
+
+                                <a href="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/using-lambda-functions.html">Tutorial: Creating and Using Lambda Functions</a> // amazon lambda, aws
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col bg-success text-white">
+                                <br>
+                                Project "<a href="#guesstheplacebot" style="color: white;"><b>GuessThePlaceBot</b></a>" - START (07/08/2018)
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <a href="https://github.com/awsdocs/aws-doc-sdk-examples/blob/master/javascript/example_code/s3/s3_upload.js">Amazon S3 - Github examples</a> // amazon s3, aws
+                    <br>
+
+                    <a href="https://aws.amazon.com/s3/?nc=sn&loc=0">Amazon S3</a> // amazon s3, aws
+                    <br>
+
+                    <a href="https://medium.freecodecamp.org/write-less-do-more-with-javascript-es6-5fd4a8e50ee2">JavaScript ES6 — write less, do more</a> // javascript, es6
+                    <br>
+
+                    <a href="https://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it">Object-Relational Mapping (ORM) is a technique that lets you query and manipulate data from a database using an object-oriented paradigm</a> // sql, orm, sequelize
+                    <br>
+
+                    <a href="http://docs.sequelizejs.com/">Sequelize - promise-based ORM for Node.js</a> // sql, orm, sequelize
+                    <br>
+
+                    <a href="https://medium.freecodecamp.org/machine-learning-how-to-go-from-zero-to-hero-40e26f8aa6da">Machine Learning: how to go from Zero to Hero</a> // machine learning, ml
+                    <br>
+
+                    <br>
+                    <div>
+                        <div class="row">
+                            <div class="col bg-info text-white">
+                                <br>
+                                Project "<a href="#finishphrasebot" style="color: white;"><b>FinishPhraseBot</b></a>" - END (20/07/2018)
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col border border-info">
+                                <a href="https://ifcomp.org/">The Interactive Fiction Competition (in context of chatbots)</a> // chatbot, interactive fiction
+                                <br>
+
+                                <a href="http://textadventures.co.uk/">Interactive fiction in context of chatbots</a> // chatbot, interactive fiction
+                                <br>
+
+                                <a href="https://medium.com/devschacht/node-hero-chapter-5-dd79607858f2">Работа с базами данных (Node Hero: Глава 5)</a> // node, db
+                                <br>
+
+                                <a href="https://deepmind.com/blog/wavenet-generative-model-raw-audio/">WaveNet: A Generative Model for Raw Audio</a> // chatbot, voicebot, wavenet
+                                <br>
+
+                                <a href="https://ai.googleblog.com/2017/12/tacotron-2-generating-human-like-speech.html">Tacotron 2: Generating Human-like Speech from Text</a> // tacotron, chatbot, google
+                                <br>
+
+                                <a href="https://ai.googleblog.com/2018/05/duplex-ai-system-for-natural-conversation.html">Google Duplex: An AI System for Accomplishing Real-World Tasks Over the Phone</a> // chatbot, voicebot, google duplex
+                                <br>
+
+                                <a href="https://jaanus.com/api-ai-voicebot/">How to build a simple web-based voice bot with api.ai</a> // chatbot, voicebot
+                                <br>
+
+                                <a href="https://chatbotsmagazine.com/a-new-approach-to-voice-user-interfaces-e1fbbadde717?gi=604e2f2e45e3">A New Approach to Voice User Interfaces</a> // chatbot, voicebot
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col bg-info text-white">
+                                <br>
+                                Project "<a href="#finishphrasebot" style="color: white;"><b>FinishPhraseBot</b></a>" - START (13/07/2018)
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
                     <a href="https://node-postgres.com/features/connecting">Connecting to PostgreSQL</a> // postgreSQL
                     <br>
 
@@ -1277,15 +1432,16 @@
             <h4><a name="interests">Interests/About me</a></h4>
             I’m 35, I was born and live in Ukraine (<a href="https://www.google.com.ua/maps/@49.4413417,32.0787871,13.25z?hl=en">Cherkasy</a>). I came to coding from biology (have <a href="https://cdu.edu.ua/en/">master’s degree in human physiology, unfinished PhD</a>; while studying at school and university was a winner of All-Ukrainian Biological Olympiads). I have >10-years of experience as an English>Russian medical translator [<a href="http://medconsult.ru/">TA Medconsult</a>]), translated for  Novartis, Pfizer, Roche, Bristol-Myers Squibb, Sanofi, Regeneron Pharmaceuticals etc.
             <br>Passed a 2-month internship in a molecular biology lab <a href="http://www.anopheles-strasbourg.fr/">INSERM U963 / CNRS UPR9022</a> (Strasbourg, France).
-            <br>Have been learning to code for 10 months (~750 hours in net) so far (since October 2017).
+            <br>Have been learning to code for 11 months (~780 hours in net) so far (since October 2017).
             <br><br>
             Visual timeline of my education and jobs is as follows:
             <br>
             <a href="public/img/visual_cv.jpg" target="_blank"><img src="public/img/visual_cv.jpg" class="img-fluid img-thumbnail"></a>
             <br>
+            <br>
             I would like to be working on problems at the junction of coding and biology, psychology, education but other topics are also welcome.
             <br>
-            I’m married, we have 3 kids (born in 2012, 2014 & 2014), trying to keep a healthy balance between work and family/life. Our family/kids blog on <a href="https://www.youtube.com/channel/UCohWank8Tc0f6GocdyXuiPg">Youtube</a>. I like mounting biking – <a href="https://www.strava.com/athletes/20431137">Strava</a>.
+            I’m married, we have 3 kids (born in 2012, 2014 & 2014), trying to keep a healthy balance between work and family/life. Our family/kids blog on <a href="https://www.youtube.com/channel/UCohWank8Tc0f6GocdyXuiPg">Youtube</a>. <br>I like mounting biking – <a href="https://www.strava.com/athletes/20431137">Strava</a>.
         </p>
 
         <hr>
