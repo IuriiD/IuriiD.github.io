@@ -97,8 +97,8 @@
                 <br>
                 Do you know your city well? Can you recognize its places by street view photos? Play a game with <b><a href="https://t.me/GuessThePlaceBot" target="_blank">GuessThePlaceBot</a></b> and check that ;)
                 This is a Telegram bot that asks to identify places in a chosen city by Google Street View images.
-                Built using NodeJS for bot logic, Telegram Bot API (<a href="https://github.com/telegraf/telegraf" target="_blank">Telegraf</a> wrapper), hosted on AWS Lambda
-                [@todo: add PostgreSQL for storing data].
+                Built using NodeJS for bot logic, Telegram Bot API (<a href="https://github.com/telegraf/telegraf" target="_blank">Telegraf</a> wrapper), hosted on AWS Lambda, stores conversation state in PostgreSQL DB (AWS RDS).
+                Also there's a version not using DB but it's a bit unstable on AWS Lambda.
                 <br><b>Note:</b> Doesn't work on Telegram Desktop or Telegram for Web (platforms limitation - don't allow to send location)
                 <br>
                 <br>
