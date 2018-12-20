@@ -42,7 +42,7 @@
 <body>
     <div class="container">
         <div align="right">
-            <span style="font-size: 12px;">Last updated: October 11, 2018 [updated monthly] - v.0.6 </span>
+            <span style="font-size: 12px;">Last updated: December 18, 2018 [updated ~monthly] - v.0.6 </span>
         </div>
 
         <div class="row" style="border-color: black">
@@ -74,15 +74,15 @@
             </div>
             <div class="col-sm-10">
                 <div class="alert alert-info">
-                    <b>Hi! My name is Iurii [ˈjurij'] Dziuban. I'm a self-taught developer and chatbot enthusiast.</b>
+                    <b>Hi! My name is Iurii [ˈjurij'] Dziuban. I'm a starting chatbot developer.</b>
                     <br>
                     My current tech stack in regard to chatbots looks like this:
                 </div>
                 <div class="container border rounded">
-                    <img src="public/img/stack.jpg" class="img-fluid" width="889px" height="524px">
+                    <img src="public/img/stack_dec2018.jpg" class="img-fluid" width="889px" height="524px">
                 </div>
                 <div>
-                    Other things I'm working/worked with: <i>Flask, Github, Heroku, AWS Lambda/S3, Microsoft Bot Framework, LUIS, RiveScript, Google Actions etc</i>
+                    Other things I'm working/worked with: <i>Flask, Github, Heroku, AWS Lambda/S3/EC2, Redis, Docker etc</i>
                 </div>
             </div>
         </div>
@@ -91,69 +91,75 @@
 
         <div>
             <h4><a name="projects">Projects</a></h4>
-            Here are the projects that I’ve done (the most recent go first):
-            <!-- br>
+            <b>Here are the projects that I’ve done (the most recent go first).<br>Only my side/hobby projects are shown here:</b><br>
+            <br>
             
             <div class="border rounded p-3">
               <strong><a name="bestmoviequotes" href="https://github.com/IuriiD/best_movie_quotes" target="_blank">'BestMovieQuotes'</a></strong>
               <a href="https://assistant.google.com/services/a/uid/0000004c083f19b6?hl=en-GB" class="btn btn-success btn-sm" target="_blank">Google Assistant</a> <a href="https://github.com/IuriiD/best_movie_quotes"
                 class="btn btn-secondary btn-sm" target="_blank">Github</a> (October 2018)
               <br>
-              <a href="public/img/gtpb-stack.png" target="_blank"><img src="public/img/gtpb-stack.png" class="img-fluid"></a>
-              <br>
-              In October 2018 I got acquainted with Google Assistant platform and made several simple voice bots. One of them, <a href="https://github.com/IuriiD/best_movie_quotes" target="_blank">BestMovieQuotes</a> was 
-              After I started to work full-time as a developer my time for hobby projects dramatically shortened but nevertheless I'm trying 
-              <br>September 30, 2018: Presented the bot in blog <a href="https://findthisplace.d3.ru/guesstheplacebot-chatbot-igra-ugadai-mesto-po-street-view-1650659/?sorting=rating"
-                target="_blank">findthisplace.d3.ru</a>, getting feedback..
-              <br>
+              <a href="public/img/bmq-stack.jpg" target="_blank"><img src="public/img/bmq-stack.jpg" class="img-fluid"></a>
+              <br><p>
+              So starting from September 18, 2018 I switched from self-educating in hobby mode 2-4 h/day to building chatbots
+              full-time for <a href="https://masterofcode.com/" target="_blank">Master of Code</a>. So I will probably have less time for my side projects but will try to hold on ;)
+              In October I got acquiainted with <a href="https://console.actions.google.com/u/0/" target="_blank">Actions on Google</a> and built 2 simple voice bots for <a href="https://assistant.google.com/" target="_blank">Google Assistant</a> platform using
+              <a href="https://dialogflow.com/" target="_blank">Dialogflow</a> and <a href="https://firebase.google.com/docs/functions/" target="_blank">Cloud Functions for Firebase</a>. One of these bots, <b><a href="https://assistant.google.com/services/a/uid/0000004c083f19b6?hl=en-GB" target="_blank">BestMovieQuotes</a></b>, was
+              approved by Google and is <a href="https://assistant.google.com/services/a/uid/0000004c083f19b6?hl=en-GB" target="_blank">publicly available</a> now (though not for all countries and/or locales - you may need to switch
+              to English as a basic language on your device). So it's a quite simple bot, actually a stripped down Dialogflow's smalltalk agent that answers with audio-quotes from
+              famous movies (like "The Godfather", "Casablanka", "The Lord of the Rings", "Titanic" etc.).
+              It gives more or less relevant responses to phrases like 'hello', 'how are you', 'what's up', 'what is life/love',
+              'bye' etc and you can also ask it for a random quote. You can try it on your smartphone in Google Assistant app (<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.googleassistant&hl=en" target="_blank">Android</a>, <a href="https://itunes.apple.com/us/app/google-assistant/id1220976145?mt=8" target="_blank">iOS</a>) or on devices like Google Home etc.
+              To invoke the bot please say something like '<i>Ok Google, talk to Best Movie Quotes</i>' or '<i>Ask Best Movie Quotes for a random quote</i>'.</p> 
+              <p>P.s. A few words about how I got
+              this bot approved and included into Google Actions directory: it wasn't so straightforward, I succeded only after 3
+              tries ;) The problem was that I wanted my bot to conduct a more or less 'natural' talk,
+              listening to user's phrases and responding with relevant quotes. But the guys approving the app wrote that "During our
+              testing, we found that your app would sometimes leave the mic open for the user without any prompt".
+              I tried to prompt user to continue dialog using the quote <a href="https://www.youtube.com/watch?v=AfDZc99N5Tg" target="_blank">"Talk to me goose"</a> from "Top Gun" which I added after each response but this variant was also rejected. So
+              finally I put an explicit 'robot-read' prompt after each quote - it's not really what I wanted and sounds a bit weird but probably is more correct.
+              </p>
+              <p>
+              As for the 2nd bot. We had a Halloween party here at MOC, and I also built a simpe voice bot especially for this event -
+              <b><a href="https://github.com/IuriiD/creepy_sounds" target="_blank">CreepySounds</a></b>. I didn't submit it to Google Actions directory so this bot
+              isn't available publicly. But in case you'ld like the idea you may use my code and easily make one for yourself (it should be accessible as a test version on devices where you're logged in).
+              This bot responds to any voice input by a random scary sound (taken from Google sounds library, mainly <a href="https://developers.google.com/actions/tools/sound-library/horror" target="_blank">Horror</a> sounds).
+              </p>
               <br>
               <div class="row">
                 <div class="col">
-                  <iframe width="340" height="220" src="https://www.youtube.com/embed/wnC-QVKlDUw" frameborder="0" allow="autoplay; encrypted-media"
-                    allowfullscreen></iframe>
-                  <a href="public/img/gtpb-7.jpg" target="_blank"><img src="public/img/gtpb-7.jpg" class="img-fluid img-thumbnail"
+                  <!--iframe width="340" height="220" src="https://www.youtube.com/embed/wnC-QVKlDUw" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe-->
+                  <a href="public/img/bestMovieQuotesGADir.png" target="_blank"><img src="public/img/bestMovieQuotesGADir.png" class="img-fluid img-thumbnail"
                       style="max-width: 330px"></a>
                 </div>
                 <div class="col">
-                  <a href="public/img/gtpb-1.jpg" target="_blank"><img src="public/img/gtpb-1.jpg" class="img-fluid img-thumbnail"
-                      style="max-width: 330px"></a>
+
+                  <a href="public/img/bestMovieQuotestStats.png" target="_blank"><img src="public/img/bestMovieQuotestStats.png" class="img-fluid img-thumbnail"
+                      style="max-width: 335px"></a>
                 </div>
                 <div class="col">
-                  <a href="public/img/gtpb-2.jpg" target="_blank"><img src="public/img/gtpb-2.jpg" class="img-fluid img-thumbnail"
-                      style="max-width: 335px"></a>
+                  <a href="public/img/creepySoundsMocHlwn2018.jpg" target="_blank"><img src="public/img/creepySoundsMocHlwn2018.jpg"
+                      class="img-fluid img-thumbnail" style="max-width: 330px"></a>
                 </div>
               </div>
-              <div class="row">
-                <div class="col">
-                  <a href="public/img/gtpb-3.jpg" target="_blank"><img src="public/img/gtpb-3.jpg" class="img-fluid img-thumbnail"
-                      style="max-width: 335px"></a>
-                </div>
-                <div class="col">
-                  <a href="public/img/gtpb-4.jpg" target="_blank"><img src="public/img/gtpb-4.jpg" class="img-fluid img-thumbnail"
-                      style="max-width: 335px"></a>
-                </div>
-                <div class="col">
-                  <a href="public/img/gtpb-5.jpg" target="_blank"><img src="public/img/gtpb-5.jpg" class="img-fluid img-thumbnail"
-                      style="max-width: 335px"></a>
-                </div>
-              </div>
-            </div-->
+            </div>
 
             <br>
 
             <div class="border rounded p-3">
-                <strong>I got a full-time job as a software developer! </strong>
+                <strong>I got a full-time job as a chatbot developer! </strong>
                 <br>
                 <a href="public/img/moc_logo.png" target="_blank"><img src="public/img/moc_logo.png" class="img-fluid"></a>
                 <br>
-                This post is not about another chatbot of mine but about an important event in my coding career: I got hired and now work at <b><a href="https://www.facebook.com/master.of.code.team/" target="_blank">Master of Code</a></b> (<a href="https://masterofcode.com/" target="_blank">www</a>)!                 
+                This post is not about another chatbot of mine but about an important event in my coding career: I got hired and now work at <b>Master of Code</b> (<a href="https://www.facebook.com/master.of.code.team/" target="_blank">FB</a>, <a href="https://masterofcode.com/" target="_blank">www</a>)!                 
                 <br>Just a quick summary of my journey to this stage: I'm a biologist by education, last 10 years have been working as an
                 English-Russian medical translator. Married, we have 3 small kids (<6 years old). I started to learn coding 11 months
-                    before got hired when I was 34 (in Oct 2017). I was studying for 2-4 hours a day after my main work and on weekends,
-                    ~80 hours/month. By the moment I got a job I was learning for ~840 hours net. I was making small projects (9 in
-                    total). Made 8 chatbots. Started from Python but then moved to Node JS. For more info – please see below. I passed
-                    2 interviews, both at the company for which I’m working now. Still getting used to new format of work/life (as of
-                    Oct 11, 2018 I’ve been working for 3 weeks). A long way ahead… ;)
+                    ago, in Oct 2017 when I was 34. I was studying for 2-4 hours a day after my main work and on weekends,
+                    ~80 hours/month. By the moment I got a job I have been self-educating for ~840 hours net. I was making small projects (9 in
+                    total). Created 8 chatbots. Started from Python but then moved to Node JS. For more info – please see below. I had
+                    2 interviews, both at the company for which I’m working now. Still getting used to the new format of work/life (as of
+                    Oct 11, 2018 I’ve been working for 3 weeks). A long and exciting way ahead… ;)
             </div>            
 
             <br>
@@ -166,7 +172,6 @@
                 Do you know your city well? Can you recognize its places by street view photos? Play a game with <b><a href="https://t.me/GuessThePlaceBot" target="_blank">GuessThePlaceBot</a></b> and check that ;)
                 This is a Telegram bot that asks to identify places in a chosen city by Google Street View images.
                 Built using NodeJS for bot logic, Telegram Bot API (<a href="https://github.com/telegraf/telegraf" target="_blank">Telegraf</a> wrapper), hosted on AWS Lambda, stores conversation state in PostgreSQL DB (AWS RDS).
-                Also there's a version not using DB but it's a bit unstable on AWS Lambda.
                 <br><b>Note:</b> Doesn't work on Telegram Desktop or Telegram for Web (platforms limitation - don't allow to send location)
                 <br>September 30, 2018: Presented the bot in blog <a href="https://findthisplace.d3.ru/guesstheplacebot-chatbot-igra-ugadai-mesto-po-street-view-1650659/?sorting=rating" target="_blank">findthisplace.d3.ru</a>, getting feedback..
                 <br>
@@ -234,13 +239,14 @@
             <br>
 
             <div class="border rounded p-3">
-                <strong><a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS" target="_blank">'FoodCompositionBot v2.0'</a></strong> <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> <b>(is reviewed by Facebook since July 01)</b> <a href="https://github.com/IuriiD/food_composition_chatbot_JS" class="btn btn-secondary btn-sm" target="_blank">Github</a> (June 2018)
+                <strong><a name="foodcompositionbotjs" href="https://github.com/IuriiD/food_composition_chatbot_JS" target="_blank">'FoodCompositionBot v2.0'</a></strong> <a href="https://www.facebook.com/Foodcompositionbot-230099550919706/" class="btn btn-success btn-sm" target="_blank">Facebook</a> <a href="https://github.com/IuriiD/food_composition_chatbot_JS" class="btn btn-secondary btn-sm" target="_blank">Github</a> (June 2018)
                 <br>
                 <a href="public/img/foodcompbotjs-stack.png" target="_blank"><img src="public/img/foodcompbotjs-stack.png" class="img-fluid"></a>
                 <div>
                     FoodCompositionBot is a simple chatbot that analyses food by image (or at least does his best to do that ;) Give it a try by uploading a photo from your camera or photos, posting a link to an image with food or simply typing a food name.
-                    This bot was written using NodeJS, <a href="https://cloud.google.com/vision/" target="_blank">Google Vision API</a> for image content analysis, <a href="http://www.nutritionix.com/api" target="_blank">Nutritionix  API</a> as nutrients data source and Facebook Messenger APIs.
+                    This bot was written using NodeJS, <a href="https://cloud.google.com/vision/" target="_blank">Google Vision API</a> for image content analysis, <a href="http://www.nutritionix.com/api" target="_blank">Nutritionix  API</a> as nutrients data source and Facebook Messenger APIs. P.s. It's hosted on Heroku so don't be surprised if it starts the conversation with some delay ("cold" start may take up to 6-10 seconds)
                 </div>
+                <br>
                 <div class="row">
                     <div class="col">
                       <iframe width="707" height="435" src="https://www.youtube.com/embed/GR9-m8wm-hw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -265,13 +271,14 @@
             <br>
 
             <div class="border rounded p-3">
-                <strong><a href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank">'Fellowtraveler-website'</a> <a href="http://35.231.253.63:80" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Telegram chatbot'</a> <a href="http://t.me/FellowtravelerBot" class="btn btn-success btn-sm" target="_blank">Demo<sup>α</sup></a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Facebook chatbot'</a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---FBMessengerChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a></strong> <br>(March-June 2018 [<b>project paused</b>])
+                <strong><a href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank">'Fellowtraveler-website'</a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---website" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Telegram chatbot'</a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a> | <a href="https://github.com/IuriiD/fellowtraveler.club---TelegramChatBot" target="_blank">'Fellowtraveler-Facebook chatbot'</a> <a name="fellowtraveler" href="https://github.com/IuriiD/fellowtraveler.club---FBMessengerChatBot" target="_blank" class="btn btn-secondary btn-sm">Github</a></strong> <br>(March-June 2018 [<b>project stopped</b>])
                 <br>
                 <a href="public/img/teddygo-stack.jpg" target="_blank"><img src="public/img/teddygo-stack.jpg" class="img-fluid"></a>
                 <br>
-                This is supposed to be an entertainment project/social experiment, built on Python using Flask, MongoDB and APIs for GoogleMaps, Dialogflow and messengers (Telegram, Facebook).
+                This is supposed to be an entertainment project/social experiment - a toy 'travelling' across the globe being passed between accidental people. Built on Python using Flask, MongoDB and APIs for GoogleMaps, Dialogflow and messengers (Telegram, Facebook). A chatbot (2 integrations - Telegram & Facebook) and a website working with the same database.
                 <br><b><i>Update - 02 June 2018:</i></b> Website and chatbot for Telegram are almost done. Hope to make a version for FB Messenger and launch the project soon.
-                <br><b><i>Update - 11 July 2018:</i></b> Due to other training tasks with higher priority I had to pause work on this project (but still hope to finish it and launch). Website and Telegram bot are almost ready, Facebook bot is ready for ~80%.
+                <br><b><i>Update - 11 July 2018:</i></b> Due to other training tasks with higher priority I had to pause my work on this project (but still hope to finish it and launch). Website and Telegram bot are almost ready, Facebook bot is ready for ~80%.
+                <br><b><i>Update - 18 December 2018:</i></b> Eh.. Still no time to finish this project. Telegram bot and website off. Who knows maybe one day I will rewrite it on node.js (I still like the idea).
                 <br><br>
                 <div class="row">
                     <div class="col">
@@ -289,7 +296,7 @@
             <br>
 
             <div class="border rounded p-3">
-                <strong><a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">'Remindmebot'</a></strong> <a href="https://www.facebook.com/RemindMeBot/" class="btn btn-success btn-sm" target="_blank">Facebook</a> (not public, available for testers only) <a href="https://github.com/IuriiD/remindmebot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (May 2018)
+                <strong><a name="remindmebot" href="https://github.com/IuriiD/remindmebot" target="_blank">'Remindmebot'</a></strong> <a href="https://github.com/IuriiD/remindmebot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (May 2018)
                 <br>
                 <a href="public/img/remindmebot-stack.png" target="_blank"><img src="public/img/remindmebot-stack.png" class="img-fluid"></a>
                 <br>
@@ -310,7 +317,7 @@
             <br>
 
             <div class="border rounded p-3">
-                <strong><a name="sharedexpensesbot" href="https://github.com/IuriiD/shared_expenses_bot" target="_blank">'SharedExpensesBot'</a></strong> <a href="http://t.me/SharedExpensesBot" class="btn btn-success btn-sm" target="_blank">Telegram</a> <a href="https://github.com/IuriiD/shared_expenses_bot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (February-March 2018)
+                <strong><a name="sharedexpensesbot" href="https://github.com/IuriiD/shared_expenses_bot" target="_blank">'SharedExpensesBot'</a></strong> <a href="https://github.com/IuriiD/shared_expenses_bot" class="btn btn-secondary btn-sm" target="_blank">Github</a> (February-March 2018)
                 <br>
                 <a href="public/img/sharedexpensesbot-stack.png" target="_blank"><img src="public/img/sharedexpensesbot-stack.png" class="img-fluid"></a>
                 <br>
@@ -367,7 +374,7 @@
             </div>
 
             <div class="border rounded p-3">
-                <strong><a name="foodcomposition" href="https://github.com/IuriiD/food_composition" target="_blank">'Food Composition'</a></strong> <a href="http://35.231.253.63:83" class="btn btn-success btn-sm" target="_blank">Demo</a> <a href="https://github.com/IuriiD/food_composition" class="btn btn-secondary btn-sm" target="_blank">Github</a> (January-February 2018)
+                <strong><a name="foodcomposition" href="https://github.com/IuriiD/food_composition" target="_blank">'Food Composition'</a></strong> <a href="https://github.com/IuriiD/food_composition" class="btn btn-secondary btn-sm" target="_blank">Github</a> (January-February 2018)
                 <br>
                 My 2nd real miniproject. Done in Jan 2018. A Flask app that tries to determine approximate percentage of fats, carbohydrates and proteins in food by image.
                 Made for fun. Still thinking how to filter non-food images ;) Uses <a href="https://cloud.google.com/vision/">Google Vision API</a> and <a href="http://www.nutritionix.com/api">Nutritionix API</a>.
@@ -391,7 +398,7 @@
             <br>
 
             <div class="border rounded p-3">
-                <strong><a name="car-price-age-mileage" href="https://github.com/IuriiD/car-price-age-mileage" target="_blank">'Car-price-age-mileage'</a></strong> <a href="http://35.231.253.63:86" class="btn btn-success btn-sm" target="_blank">Demo</a> <a href="https://github.com/IuriiD/car-price-age-mileage" class="btn btn-secondary btn-sm" target="_blank">Github</a> (November-December 2017)
+                <strong><a name="car-price-age-mileage" href="https://github.com/IuriiD/car-price-age-mileage" target="_blank">'Car-price-age-mileage'</a></strong> <a href="https://github.com/IuriiD/car-price-age-mileage" class="btn btn-secondary btn-sm" target="_blank">Github</a> (November-December 2017)
                 <br>
                 My 1st real miniproject. Started on 01.11.2017 after learning Python/coding for ~175 hours (3-3.5months) in total, done in ~70 hours.
                 A Flask app that allows user to choose a car model and get scatter charts showing how this car's price is changing depending on its age and mileage.
@@ -421,20 +428,202 @@
             <h4><a name="knowledge">Knowledge</a></h4>
             Here I will be posting links to courses/materials/software and other resources that I’ve covered/worked with (last links go first).
             <br>
-            <p>
-                <div>
+            <br>
+              <p>
 
-                    <div>
-                        <div class="row">
+                          <img src="public/img/achievment_icon.gif"> <b>1400 hours</b>
+                          <br>
+
+                          <a href="https://learn.javascript.ru/about-oop">JS - OOP</a> // js, oop
+                          <br>
+                          
+                          <a href="https://learn.javascript.ru/oop">ООП в функциональном стиле</a> // js, oop
+                          <br>
+
+                          <img src="public/img/achievment_icon.gif"> <b>1300 hours</b>
+                          <br>
+                          
+                          <a href="https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely">Delete remote branch on Github</a> // git
+                          <br>
+
+                          <a href="https://codeburst.io/javascript-async-await-with-foreach-b6ba62bbf404">JavaScript: async/await with forEach()</a> // js, async
+                          <br>
+                          
+                          <a href="https://blog.messengerdevelopers.com/using-the-webview-to-create-richer-bot-to-user-interactions-ed8a789523c6">Tutorial: Using the Messenger Webview to create richer bot-to-user interactions</a> // messenger, webview
+                          <br>
+                          
+                          <a href="https://www.w3schools.com/js/js_this.asp">The JavaScript this Keyword</a> // js, this
+                          <br>
+                          
+                          <a href="https://www.slideshare.net/masters-academy/call-stack-event-loop-and-async-programming">Call stack, event loop and async programming</a> // js, call stack, async
+                          <br>
+                          
+                          <a href="http://travelscode.com/funktsionalne-programuvannya-v-javascript/">ФУНКЦІОНАЛЬНЕ ПРОГРАМУВАННЯ В JAVASCRIPT</a> // js
+                          <br>
+                          
+                          <a href="https://habr.com/post/154105/">Функциональное программирование на Javascript</a> // js
+                          <br>
+
+                          <img src="public/img/achievment_icon.gif"> <b>1200 hours</b>
+                          <br>
+
+                          <a href="https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff">Understanding Asynchronous JavaScript — the Event Loop</a> // js, async
+                          <br>
+                          
+                          <a href="https://www.npmjs.com/package/morgan">Morgan (npm) </a> //npm, morgan
+                          <br>
+                          
+                          <a href="https://www.npmjs.com/package/joi">JOI (npm)</a> // npm, joi
+                          <br>
+
+                          <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No
+                          Excuses!)</a> // unicode
+                          <br>
+
+                          <img src="public/img/achievment_icon.gif"> <b>1100 hours</b>
+                          <br>
+                          
+                          <a href="https://octoperf.com/blog/2017/10/19/how-to-analyze-jmeter-results/">JMeter Result Analysis: The Ultimate Guide JMETER RESULT ANALYSIS: THE ULTIMATE GUIDE</a> // jmeter, load testing
+                          <br>
+                          
+                          <a href="https://jmeter.apache.org/usermanual/index.html">Jmeter</a> // jmeter, load testing
+                          <br>
+                      <div>
+                        <div>
+                          <div class="row">
                             <div class="col bg-info text-white">
+                              <br>
+                              Project "<a href="https://github.com/IuriiD/msbf-bot-reminder" target="_blank" style="color: white;"><b>BotReminder
+                                  2.0</b></a>" - STOPPED (11/02/2018)
+                              <br>
+                              <br>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col border border-info">
+                                <a href="https://flaviocopes.com/jest/">TESTING JAVASCRIPT WITH JEST</a> // test, tdd, jest
                                 <br>
-                                Project "<a href="#foodcomposition" style="color: white;"><b>BotReminder 2.0</b></a>" - IN DEVELOPMENT
+                                
+                                <a href="https://jestjs.io/docs/en/getting-started">Jest: Introduction</a> // test, tdd, jest
                                 <br>
+                                
+                                <a href="https://codeburst.io/revisiting-node-js-testing-part-1-84c33bb4d711">Revisiting Node.js Testing: Part 1</a> // test, tdd
+                                <br>
+                                
+                                <a href="https://medium.com/welldone-software/an-overview-of-javascript-testing-in-2018-f68950900bc3">An Overview of JavaScript Testing in 2018</a> // test, tdd
+                                <br>
+                                
+                                <a href="https://medium.com/@pgivens/write-cleaner-code-using-prettier-and-eslint-in-vscode-d04f63805dcd">Eslint + Prettier in Vscode</a> // eslint, prettier
+                                <br>
+                                
+                                <a href="https://www.youtube.com/watch?v=YIvjKId9m2c">Setting up Eslint + Prettier</a> // eslint, prettier
+                                <br>
+                                
+                                <a href="https://medium.freecodecamp.org/these-tools-will-help-you-write-clean-code-da4b5401f68e">These tools will help you write clean code</a> // general, eslint, prettier
+                                <br>
+                                
+                                <a href="https://www.sitepoint.com/search-engine-node-elasticsearch/">Build a Search Engine with Node.js and Elasticsearch</a> // elastic search, node
+                                <br>
+                                
+                                <a href="https://qbox.io/blog/integrating-elasticsearch-into-node-js-application">How to Integrate Elasticsearch into Your Node.js Application</a> // elastic search
+                                <br>
+                                
+                                <a href="https://github.com/elastic/elasticsearch-js">Elastic Search</a> // elastic search
+                                <br>
+
+                                <a href="https://medium.com/node-js-tips-tricks/implementing-a-job-queue-with-node-js-ffcfbc824b01">Implementing a Job Queue with Node.js</a> // job queue, kue
+                                <br>
+                                
+                                <a href="https://gist.github.com/MohamedAlaa/2961058">tmux</a> // tmux
+                                <br>
+
+                                <img src="public/img/achievment_icon.gif"> <b>1000 hours</b>
+                                <br>
+                                
+                                <a href="https://en.wikipedia.org/wiki/Job_queue">Job queue</a> // job queue
+                                <br>
+                                
+                                <a href="https://github.com/Automattic/kue">Automattic/kue</a> // kue
+                                <br>
+                                
+                                <a href="https://github.com/keon/awesome-nlp">awesome-nlp</a> // nlp
+                                <br>
+                                
+                                <a href="https://thegradient.pub/nlp-imagenet/">NLP's ImageNet moment has arrived</a> // nlp
+                                <br>
+
+                                <a href="https://chatbotsmagazine.com/design-framework-for-chatbots-aa27060c4ea3">Design Framework for Chatbots</a> // chatbot, design
+                                <br>
+                                
+                                <a href="https://towardsdatascience.com/an-easy-introduction-to-natural-language-processing-b1e2801291c1">An easy introduction to Natural Language Processing</a> // nlu, nlp
+                                <br>
+                                
+                                <a href="https://ru.hexlet.io/courses/cli-basics/lessons/command-line/theory_unit">Command line basics</a> // command line
                                 <br>
                             </div>
-                        </div>
-                        <div class="row">
+                            </div>
+                            <div class="row">
+                              <div class="col bg-info text-white">
+                                <br>
+                                Project "<a href="https://github.com/IuriiD/msbf-bot-reminder" target="_blank" style="color: white;"><b>BotReminder
+                                    2.0</b></a>" - CONTINUE (10/13/2018)
+                                <br>
+                                <br>
+                              </div>
+                            </div>
+                            </div>
+
+                            <br>
+                            
+                            <div>
+                              <div class="row">
+                                <div class="col bg-success text-white">
+                                  <br>
+                                  Project "<a href="#bestmoviequotes" style="color: white;"><b>BestMovieQuotes</b></a>" - END (10/12/2018)
+                                  <br>
+                                  <br>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col border border-success">
+                              <a href="https://developers.google.com/actions/extending-the-assistant">Actions on Google</a> // actions on google,
+                              dialogflow, chatbot
+                              <br>
+                              
+                              <a href="https://www.androidauthority.com/how-to-build-google-assistant-actions-877154/">Build your own Action for
+                                Google Assistant</a> // actions on google, dialogflow, chatbot
+                              <br>
+                              
+                              <a href="https://www.smashingmagazine.com/2017/05/build-action-google-home-api-ai/">How To Build Your Own Action For
+                                Google Home Using API.AI</a> // actions on google, dialogflow, chatbot
+                              <br>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col bg-success text-white">
+                                  <br>
+                                  Project "<a href="#bestmoviequotes" style="color: white;"><b>BestMovieQuotes</b></a>" - START (10/10/2018)
+                                  <br>
+                                  <br>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <br>
+
+                        <div>
+                          <div class="row">
+                            <div class="col bg-info text-white">
+                              <br>
+                              Project "<a href="https://github.com/IuriiD/msbf-bot-reminder" target="_blank" style="color: white;"><b>BotReminder
+                                  2.0</b></a>" - PAUSED (10/10/2018)
+                              <br>
+                              <br>
+                            </div>
+                          </div>
+                          <div class="row">
                             <div class="col border border-info">
+                                
                                 <a href="https://12factor.net/">The Twelve Factors</a> // coding, general
                                 <br>
 
@@ -529,7 +718,7 @@
                         <div class="row">
                             <div class="col bg-info text-white">
                                 <br>
-                                Project "<a href="#foodcomposition" style="color: white;"><b>BotReminder 2.0</b></a>" - START (18/09/2018)
+                                Project "<a href="https://github.com/IuriiD/msbf-bot-reminder" target="_blank" style="color: white;"><b>BotReminder 2.0</b></a>" - START (18/09/2018)
                                 <br>
                                 <br>
                             </div>
@@ -542,7 +731,7 @@
                         <div class="row">
                             <div class="col bg-warning">
                                 <br>
-                                    Project "<a href="#fellowtraveler" style="color: black;"><b>PoetBot</b></a>" - PAUSED (18/09/2018)
+                                    Project "<a href="https://github.com/IuriiD/podervjansky_bot" target="_blank" style="color: black;"><b>PodervjanskyBot</b></a>" - PAUSED (18/09/2018)
                                 <br>
                                 <br>
                             </div>
@@ -599,7 +788,7 @@
                         <div class="row">
                             <div class="col bg-warning">
                                 <br>
-                                    Project "<a href="#fellowtraveler" style="color: black;"><b>PoetBot</b></a>" - START (05/09/2018)
+                                    Project "<a href="https://github.com/IuriiD/podervjansky_bot" target="_blank" style="color: black;"><b>PodervjanskyBot</b></a>" - START (05/09/2018)
                                 <br>
                                 <br>
                             </div>
@@ -1701,7 +1890,8 @@
             <h4><a name="interests">Interests/About me</a></h4>
             I’m 35, I was born and live in Ukraine (<a href="https://www.google.com.ua/maps/@49.4413417,32.0787871,13.25z?hl=en">Cherkasy</a>). I came to coding from biology (have <a href="https://cdu.edu.ua/en/">master’s degree in human physiology, unfinished PhD</a>; while studying at school and university was a winner of All-Ukrainian Biological Olympiads). I have >10-years of experience as an English>Russian medical translator [<a href="http://medconsult.ru/">TA Medconsult</a>]), translated for  Novartis, Pfizer, Roche, Bristol-Myers Squibb, Sanofi, Regeneron Pharmaceuticals etc.
             <br>Passed a 2-month internship in a molecular biology lab <a href="http://www.anopheles-strasbourg.fr/">INSERM U963 / CNRS UPR9022</a> (Strasbourg, France).
-            <br>Have been learning to code for 12 months (~980 hours in net) so far (since October 2017).
+            <br>Have been learning to code for 14 months (~980 hours in net) so far (since October 2017).
+            <br>From September 18, 2018 work as a chatbot developer (node.js) at <a href="https://masterofcode.com/" target="_blank">Master of Code</a>.
             <br><br>
             Visual timeline of my education and jobs is as follows:
             <br>
