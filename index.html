@@ -53,7 +53,7 @@
 <body>
   <div class="container">
     <div align="right">
-      <span style="font-size: 12px;">Last updated: February 27, 2019 [updated every 1-2 months] - v.0.6 </span>
+      <span style="font-size: 12px;">Last updated: June 07, 2019 [updated every 2-3 months] - v.0.6 </span>
     </div>
 
     <div class="row" style="border-color: black">
@@ -88,19 +88,33 @@
       </div>
       <div class="col-sm-10">
         <div class="alert alert-info">
-          <b>Hi! My name is Iurii Dziuban [ˈjurij dziuban'] and I like to make chatbots.</b>
-          <br>
-          My current tech stack in regard to chatbots looks like this:
+          <b>Hi! My name is Iurii Dziuban [ˈjurij dziuban'] and I like to make chatbots.</b> 
+          <br>This is the place where I sum up my learning progress, side projects and useful links.
         </div>
         <div class="container border rounded">
-          <img src="public/img/stack_feb2019.jpg" class="img-fluid" width="889px" height="524px">
+          <br>
+          <b>My current coding experience at a glance (as of June 2019):</b>
+          <img src="public/img/hours_june2019.jpg" class="img-fluid" width="889px">
         </div>
-        <div>
-          Other things I'm working/worked with: <i>Flask, Github, Heroku, AWS Lambda/S3/EC2, Redis, Docker etc</i>
+        <br>
+        <div class="container border rounded">
+          <br>
+          <b>My current tech stack in regard to chatbots (based both on commercial and side-project experience)</b>
+          <img src="public/img/stack_june2019.jpg" class="img-fluid" width="889px" height="524px">
+          <br>          
         </div>
-        <div>
-          My current experience by programming language: <b>JavaScript (Node.js)</b> ~1100 hours, <b>Python</b> ~500
-          hours, <b>Golang</b> ~190 hours
+        <br>
+        <div class="container border rounded">
+          <br>
+          <b>I'm gradually covering the full stack of chatbot development, including:</b>
+          <img src="public/img/fullStackDeveloper.png" class="img-fluid" width="192px" height="175px" align="right">
+          <ul>
+            <li>Idea generation/Problem solving, defining requirements</li>
+            <li>Design (choosing architecture, designing conversation flow, choosing/preparing the content, graphical/functional prototyping)</li>
+            <li>Development (implementing bot logic, data storage, NLU, 3rd party integrations, custom features, bot-to-human handover etc)</li>
+            <li>Deployment</li>
+            <li>Follow-up (metrics/statistics, alerts etc)</li>
+          </ul>          
         </div>
       </div>
     </div>
@@ -109,8 +123,113 @@
 
     <div>
       <h4><a name="projects">Projects</a></h4>
-      <b>Here are the projects that I’ve done (the most recent go first; only my side/hobby projects are shown
-        here):</b><br>
+      <b>Below you can see the side/hobby projects that I've done before being hired and in parallel to my work</b><br>
+      <br>
+
+      <div class="border rounded p-3">
+        <strong><a name="itcd2019" href="">'ITCareerDay2019Bot'</a></strong>
+        <a href="https://m.me/1058299567627449?ref=ITCD2019-Welcome" class="btn btn-success btn-sm" target="_blank">Facebook</a>
+        (May 2019)
+        <br>
+        <a href="public/img/itcd2019bot_stack.jpg" target="_blank"><img src="public/img/itcd2019bot_stack.jpg" class="img-fluid"></a>
+        <br>
+        <p>
+          On May 22, 2019, our company co-organized the event called <b>IT Career Day 2019</b>, an annual job fair where companies-members of IT Cluster of our town present themselves and promote the IT sphere in general.
+        </p>
+        <p>
+          I created a chatbot-quiz for this event where the users could answer questions and win real candies and other prizes (which were given at the Company's booth).
+          Some of the questions were to check user's attentiveness or maths skills but most were about knowing IT life and IT humour ;)
+        </p>
+        <p>
+          The bot is built on Chatfuel with a custom backend (written on node.js and deployed as a Lambda function to AWS).
+          The main purpose of the backend is connecting Dialogflow to Chatfuel (plus also generating verification code and some providing other minor features).
+          The bot uses Chatfuel's built-in export to Google Sheets, send-to-email and human handover functionality.
+        </p>
+        <p>
+          When the user finishes the quiz and clicks "Get candies" a notification email is sent to admins containing user's info (name, gender, locale, a link to FB profile info etc), the verification code, number of candies that the user has won and also his/her answers to the quiz.
+          Similar results (but without responses to the quiz) are also saved to a Google Sheets document.
+        </p>
+        <p>
+          Navigation in the bot is possible using quick reply buttons and text commands (thanks to Dialogflow). The bot reprompts the last block of contents in case the user entered something irrelevant or accidentally entered some text so that quick reply buttons disappeared.
+        </p>
+        <p>
+          Bot launch results: During the event about 150 people played with the bot with ~60% coming to the Company's booth for the prize. The users seem to have liked the bot and also were often surprised when we called them by name even before they introduced themselves ;) (having their name and often a real profile photo).
+        </p>
+        </p>
+        <br>
+        <div class="row">
+          <div class="col">
+            <a href="public/img/itcd2019bot_1.png" target="_blank"><img src="public/img/itcd2019bot_1.png"
+                class="img-fluid img-thumbnail" style="max-width: 330px"></a>
+          </div>
+          <div class="col">
+      
+            <a href="public/img/itcd2019bot_3.png" target="_blank"><img src="public/img/itcd2019bot_3.png"
+                class="img-fluid img-thumbnail" style="max-width: 335px"></a>
+          </div>
+          <div class="col">
+            <a href="public/img/itcd2019bot_4.png" target="_blank"><img src="public/img/itcd2019bot_4.png"
+                class="img-fluid img-thumbnail" style="max-width: 330px"></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <a href="public/img/itcd2019bot_5.png" target="_blank"><img src="public/img/itcd2019bot_5.png"
+                class="img-fluid img-thumbnail" style="max-width: 330px"></a>
+          </div>
+          <div class="col">
+        
+            <a href="public/img/itcd2019bot_7.png" target="_blank"><img src="public/img/itcd2019bot_7.png"
+                class="img-fluid img-thumbnail" style="max-width: 335px"></a>
+          </div>
+          <div class="col">
+            <a href="public/img/itcd2019bot_8.png" target="_blank"><img src="public/img/itcd2019bot_8.png"
+                class="img-fluid img-thumbnail" style="max-width: 330px"></a>
+          </div>
+        </div>
+      </div>
+      
+      <br>
+
+      <div class="border rounded p-3">
+        <strong><a name="stickerbot" href="https://github.com/IuriiD/stickerbot"
+            target="_blank">'StickerBot'</a></strong>
+        <a href="https://github.com/IuriiD/stickerbot"
+          class="btn btn-secondary btn-sm" target="_blank">Github</a> (January 2019)
+        <br>
+        <a href="public/img/stickerbot_stack.jpg" target="_blank"><img src="public/img/stickerbot_stack.jpg" class="img-fluid"></a>
+        <br>
+        <p>
+          Found some time to get acquainted with ImageMagic. Messenger has powerful built-in drawing capabilities but I thought
+          that it might be good to make a chatbot able to process images according to given templates (e.g. add a company logo or
+          create some stylized stickers for sharing in the conversation). I failed to finish this bot due to time
+          limitations/other more important tasks but got some useful experience and additional practice in chatbot building. Maybe
+          I'll use/reuse it in some other projects later.</p> <p>The flow was supposed to be the following: the bot greets the user and
+          offers a list of templates to choose from. Only 1 was template finished - a so-called "Polaroid" (converts a photo into
+          the polaroid-style image with custom text title). Many other templates could be added (e.g. I've thought of "Visa" -
+          upload photo[-s] and indicate a country to get a photo collage with some visa-style stamps/stickers added, "Logo" - adding a company logo or other symbolics to uploaded photos etc). The user chooses
+          a template and then is asked to provide the needed data (photos, titles etc). The source and the final processed images
+          are stored on AWS S3 with links saved for this user in DB (so that one could create own sticker "packages" in
+          Messenger).</p>
+        </p>
+        <br>
+        <div class="row">
+          <div class="col">
+            <a href="public/img/stckrbt_1.png" target="_blank"><img src="public/img/stckrbt_1.png"
+                class="img-fluid img-thumbnail" style="max-width: 330px"></a>
+          </div>
+          <div class="col">
+      
+            <a href="public/img/stckrbt_2.png" target="_blank"><img src="public/img/stckrbt_2.png"
+                class="img-fluid img-thumbnail" style="max-width: 335px"></a>
+          </div>
+          <div class="col">
+            <a href="public/img/stckrbt_3.png" target="_blank"><img src="public/img/stckrbt_3.png"
+                class="img-fluid img-thumbnail" style="max-width: 330px"></a>
+          </div>
+        </div>
+      </div>
+      
       <br>
 
       <div class="border rounded p-3">
@@ -136,7 +255,7 @@
           with popular quotes (drawn on stickers) from plays by Les' Poderviansky (the bot is in
           Ukrainian) and allows to read and listen to respective plays performed by the Author. Les Podervianskyi is a
           Ukrainian painter, poet, playwright and performer. He is most famous for his absurd,
-          highly satirical, and at times obscene short plays, many quotes from which bacame popular memes (more on <a
+          highly satirical, and at times obscene short plays, many quotes from which became popular memes (more on <a
             href="https://en.wikipedia.org/wiki/Les_Podervianskyi" target="_blank">Wikipedia</a>).
         </p>
         <p>The bot was made using Node.js, <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot
@@ -146,7 +265,7 @@
           <a href="http://t.me/PodervianskogoBot" target="_blank">Telegram</a>, <a
             href="https://join.skype.com/bot/f8059dc4-587c-426f-a211-ab93b87cf905" target="_blank">Skype</a>
           <a href="https://podervianskogobot.com/webchat" target="_blank">Web</a>.
-          Actually this is the <a href="https://github.com/IuriiD/nirvana_bot" target="_blank">2nd "generation"</a> of
+          Actually, this is the <a href="https://github.com/IuriiD/nirvana_bot" target="_blank">2nd "generation"</a> of
           the bot, and the <a href="https://github.com/IuriiD/podervjansky_bot" target="_blank">1st</a> (which wasn't
           launched and was supposed only for Telegram) was made using Node.js, <a href="https://telegraf.js.org/#/"
             target="_blank">telegraf</a> wrapper of Telegram API and <a href="https://www.rivescript.com/"
@@ -185,8 +304,8 @@
               Created the bot itself on Node.js using Microsoft Bot Framework for 4 platforms (Telegram, Facebook,
               Skype, Web). Also wanted to make a version for Viber but their current policy doesn't allow that :(
               The bot is actually quite simple - after greeting each user's input is "fed" to NLU block which tries to
-              respond with relevant quote. If no intens are triggered than a simple full-text search is made and user is
-              presented with a list of plays in which his/her input was found. If no such phrases were found, user gets
+              respond with a relevant quote. If no intents are triggered then a simple full-text search is made and the user is
+              presented with a list of plays in which his/her input was found. If no such phrases were found, the user gets
               a default fallback response.
             </li>
             <li>
@@ -198,13 +317,12 @@
             <li>
               Deployed the bot to an AWS EC2 instance. This bot is not using DB and ElasticSearch (thought these could
               be used and could improve the bot) and thus can be hosted on a single t2.micro instance which is free
-              under free-tier
-              plan.
+              under the free-tier plan.
             </li>
           </ol>
         </p>
         <p>
-          So far the bot had about 20 users from Facebook, ~10 from Telegram and a few from Skype and Web version.
+          So far the bot had about 30 users from Facebook, ~10 from Telegram and a few from Skype and Web version.
 
         </p>
         <br>
@@ -254,11 +372,11 @@
         <a href="public/img/bmq-stack.jpg" target="_blank"><img src="public/img/bmq-stack.jpg" class="img-fluid"></a>
         <br>
         <p>
-          So starting from September 18, 2018 I switched from self-educating in hobby mode 2-4 h/day to building
+          So starting from September 18, 2018, I switched from self-educating in hobby mode 2-4 h/day to building
           chatbots
           full-time for <a href="https://masterofcode.com/" target="_blank">Master of Code</a>. So I will probably have
           less time for my side projects but will try to hold on ;)
-          In October I got acquiainted with <a href="https://console.actions.google.com/u/0/" target="_blank">Actions on
+          In October I got acquainted with <a href="https://console.actions.google.com/u/0/" target="_blank">Actions on
             Google</a> and built 2 simple voice bots for <a href="https://assistant.google.com/" target="_blank">Google
             Assistant</a> platform using
           <a href="https://dialogflow.com/" target="_blank">Dialogflow</a> and <a
@@ -268,8 +386,8 @@
           approved by Google and is <a href="https://assistant.google.com/services/a/uid/0000004c083f19b6?hl=en-GB"
             target="_blank">publicly available</a> now (though not for all countries and/or locales - you may need to
           switch
-          to English as a basic language on your device). So it's a quite simple bot, actually a stripped down
-          Dialogflow's smalltalk agent that answers with audio-quotes from
+          to English as a basic language on your device). So it's a quite simple bot, actually, a stripped down
+          Dialogflow's small talk agent that answers with audio-quotes from
           famous movies (like "The Godfather", "Casablanka", "The Lord of the Rings", "Titanic" etc.).
           It gives more or less relevant responses to phrases like 'hello', 'how are you', 'what's up', 'what is
           life/love',
@@ -280,24 +398,24 @@
           To invoke the bot please say something like '<i>Ok Google, talk to Best Movie Quotes</i>' or '<i>Ask Best
             Movie Quotes for a random quote</i>'.</p>
         <p>P.s. A few words about how I got
-          this bot approved and included into Google Actions directory: it wasn't so straightforward, I succeded only
+          this bot approved and included into Google Actions directory: it wasn't so straightforward, I succeeded only
           after 3
           tries ;) The problem was that I wanted my bot to conduct a more or less 'natural' talk,
           listening to user's phrases and responding with relevant quotes. But the guys approving the app wrote that
           "During our
           testing, we found that your app would sometimes leave the mic open for the user without any prompt".
-          I tried to prompt user to continue dialog using the quote <a
+          I tried to prompt the user to continue dialogue using the quote <a
             href="https://www.youtube.com/watch?v=AfDZc99N5Tg" target="_blank">"Talk to me goose"</a> from "Top Gun"
           which I added after each response but this variant was also rejected. So
           finally I put an explicit 'robot-read' prompt after each quote - it's not really what I wanted and sounds a
           bit weird but probably is more correct.
         </p>
         <p>
-          As for the 2nd bot. We had a Halloween party here at MOC, and I also built a simpe voice bot especially for
+          As for the 2nd bot. We had a Halloween party here at MOC, and I also built a simple voice bot especially for
           this event -
           <b><a href="https://github.com/IuriiD/creepy_sounds" target="_blank">CreepySounds</a></b>. I didn't submit it
           to Google Actions directory so this bot
-          isn't available publicly. But in case you'ld like the idea you may use my code and easily make one for
+          isn't available publicly. But in case you'd like the idea you may use my code and easily make one for
           yourself (it should be accessible as a test version on devices where you're logged in).
           This bot responds to any voice input by a random scary sound (taken from Google sounds library, mainly <a
             href="https://developers.google.com/actions/tools/sound-library/horror" target="_blank">Horror</a> sounds).
@@ -340,7 +458,7 @@
           ~80 hours/month. By the moment I got a job I have been self-educating for ~840 hours net. I was making small
           projects (9 in total). Created 8 chatbots. Started from Python but then moved to Node JS. For more info –
           please see below. I had 2 interviews, both at the company for which I’m working now. Still getting used to the
-          new format of work/life (as of Oct 11, 2018 I’ve been working for 3 weeks). A long and exciting way ahead… ;)
+          new format of work/life (as of Oct 11, 2018, I’ve been working for 3 weeks). A long and exciting way ahead… ;)
           </div> <br>
 
           <div class="border rounded p-3">
@@ -411,12 +529,12 @@
                 src="public/img/finishphrasebot-stack.png" class="img-fluid"></a>
             <br>
             It's always more interesting to learn something on practice ;) So learning PostgreSQL I decided to write a
-            simple bot that tells the beginning of a phrase (for eg., of a proverb) and asks user to finish it.
+            simple bot that tells the beginning of a phrase (for eg., of a proverb) and asks the user to finish it.
             It uses Dialogflow for conversation construction with webhooks on Node JS, and PostgreSQL for storing
             questions. But to make this bot a little bit more original I also attached a voice "frontend" written by <a
               href="https://jaanus.com/api-ai-voicebot/" target="_blank">Jaanus Kase</a>.
-            Give it a try ;) (works in Chrome for desctop or Android; as the webhook is hosted on Heroku and goes to
-            sleeping mode in 30 min if not used, so the 1st response may take some time or may be empty).
+            Give it a try ;) (works in Chrome for desktop or Android; as the webhook is hosted on Heroku and goes to
+            the sleeping mode in 30 min if not used, so the 1st response may take some time or may be empty).
             <br>P.s. This bot also understands SQL and the database it works with can be managed through the bot itself
             (see video; I won't provide the link to the text-only version of this bot though ;)).
             <div class="row">
@@ -468,7 +586,7 @@
               simply typing a food name.
               This bot was written using NodeJS, <a href="https://cloud.google.com/vision/" target="_blank">Google
                 Vision API</a> for image content analysis, <a href="http://www.nutritionix.com/api"
-                target="_blank">Nutritionix API</a> as nutrients data source and Facebook Messenger APIs. P.s. It's
+                target="_blank">Nutritionix API</a> as the nutrients data source and Facebook Messenger APIs. P.s. It's
               hosted on Heroku so don't be surprised if it starts the conversation with some delay ("cold" start may
               take up to 6-10 seconds)
             </div>
@@ -527,7 +645,7 @@
             <br><b><i>Update - 11 July 2018:</i></b> Due to other training tasks with higher priority I had to pause my
             work on this project (but still hope to finish it and launch). Website and Telegram bot are almost ready,
             Facebook bot is ready for ~80%.
-            <br><b><i>Update - 18 December 2018:</i></b> Eh.. Still no time to finish this project. Telegram bot and
+            <br><b><i>Update - 18 December 2018:</i></b> Eh.. Still, no time to finish this project. Telegram bot and
             website off. Who knows maybe one day I will rewrite it on node.js (I still like the idea).
             <br><br>
             <div class="row">
@@ -556,13 +674,13 @@
             <a href="public/img/remindmebot-stack.png" target="_blank"><img src="public/img/remindmebot-stack.png"
                 class="img-fluid"></a>
             <br>
-            On May 16 2018 I visited <a href="https://www.facebook.com/events/177539356217331/" target="_blank">IT
-              Career Day 2018</a> in Cherkasy, a so called "IT-job fairs", which was the 1st event of such type for me.
+            On May 16 2018, I visited <a href="https://www.facebook.com/events/177539356217331/" target="_blank">IT
+              Career Day 2018</a> in Cherkasy, a so-called "IT-job fairs", which was the 1st event of such type for me.
             There I spoke with representatives of several companies.
             Preparing for this event I looked through websites of main companies and came to know that <a
               href="https://www.facebook.com/master.of.code.team/" target="_blank">Master of Code</a> (MOC) is making
             chatbots. I had a talk with guys from MOC and they suggested me to
-            fulfill a test task writing a bot on node.js. I took this challenge. Though all my previous projects were on
+            perform a test task writing a bot on node.js. I took this challenge. Though all my previous projects were on
             Python, I never coded on Javascript before and in general up to 3/4 of instruments used in this project were
             new for me, I seem to have coped with
             the task. You can read a bit more about how I made the way from my first "Hello world" on JS to writing and
@@ -592,10 +710,10 @@
             <a href="public/img/sharedexpensesbot-stack.png" target="_blank"><img
                 src="public/img/sharedexpensesbot-stack.png" class="img-fluid"></a>
             <br>
-            The idea for this training miniproject was suggested by my <a
+            The idea for this training mini-project was suggested by my <a
               href="https://www.facebook.com/viktor.dziuban">brother</a> who said that it would be nice to have a
             chatbot that could help to track shared expenses during travels with friends.
-            For example, when one pays for apartment, someone else for dinner, the 3rd one for gas, another
+            For example, when one pays for an apartment, someone else for dinner, the 3rd one for gas, another
             food/drinks/tickets etc (as an alternative to chipping in with equal sums each time). More detailed
             information - see <a href="https://github.com/IuriiD/shared_expenses_bot" target="_blank">github</a> or <a
               href="https://productforums.google.com/forum/#!topic/dialogflow/8fi48meaeAA;context-place=mydiscussions"
@@ -677,18 +795,18 @@
                 Composition'</a></strong> <a href="https://github.com/IuriiD/food_composition"
               class="btn btn-secondary btn-sm" target="_blank">Github</a> (January-February 2018)
             <br>
-            My 2nd real miniproject. Done in Jan 2018. A Flask app that tries to determine approximate percentage of
+            My 2nd real mini-project. Done in Jan 2018. A Flask app that tries to determine an approximate percentage of
             fats, carbohydrates and proteins in food by image.
             Made for fun. Still thinking how to filter non-food images ;) Uses <a
               href="https://cloud.google.com/vision/">Google Vision API</a> and <a
               href="http://www.nutritionix.com/api">Nutritionix API</a>.
-            Additionally created a simple <a href="https://bot.dialogflow.com/foodcompositionchatbot">chatbot</a> (see
+            Additionally created [what appeared to be my 1st] simple <a href="https://bot.dialogflow.com/foodcompositionchatbot">chatbot</a> (see
             it below on the right) on <a href="https://dialogflow.com/">dialogflow.com</a> platform that can tell
             fats/carbohydrates/proteins % content for the food user enters (you can also find this chatbot for example
             in <a href="https://t.me/FoodCompositionBot">telegram</a>).
             <br>
             Topics learnt/covered in this project: <i>Flask, REST API (Google Cloud Vision API, Nutritionix API),
-              bootstrap, plot.ly, deployment to server, dialogflow, Heroku</i>.
+              bootstrap, plot.ly, deployment to a server, dialogflow, Heroku</i>.
             <div class="row">
               <div class="col">
                 <a href="public/img/fc-1.jpg" target="_blank"><img src="public/img/fc-1.jpg"
@@ -714,20 +832,20 @@
               href="https://github.com/IuriiD/car-price-age-mileage" class="btn btn-secondary btn-sm"
               target="_blank">Github</a> (November-December 2017)
             <br>
-            My 1st real miniproject. Started on 01.11.2017 after learning Python/coding for ~175 hours (3-3.5months) in
+            My 1st real mini-project. Started on 01.11.2017 after learning Python/coding for ~175 hours (3-3.5months) in
             total, done in ~70 hours.
-            A Flask app that allows user to choose a car model and get scatter charts showing how this car's price is
+            A Flask app that allows a user to choose a car model and get scatter charts showing how this car's price is
             changing depending on its age and mileage.
             Data is requested from <a href="https://auto.ria.com/">auto.ria.com</a> (the biggest Ukrainian advertisement
             board for vehicles) using their <a href="https://github.com/ria-com/auto-ria-rest-api">API</a>.
             Charts (for age & price, price & mileage and age & mileage) are drawn using 2 charting engines/libraries -
             <a href="http://pygal.org/en/stable/index.html">pygal</a> and <a href="plot.ly">plot.ly</a>.
-            About 50% of time working on this miniproject was spent learning how to create a user management system in
+            About 50% of time working on this mini-project was spent learning how to create a user management system in
             Flask (register, login, profile update, password update, password reset, avatar functions).
             App has a preferences page (accessible for registered and logged in users) where a user can change 2
-            parameters: adverticements quantity for the model being analyzed (5-50) and the charting engine.
+            parameters: advertisements quantity for the model being analyzed (5-50) and the charting engine.
             <br>
-            Topics learnt/covered in this project: <i>Flask</i> (including creation of user management system),
+            Topics learnt/covered in this project: <i>Flask</i> (including the creation of user management system),
             <i>vagrant, git, virtualenv, REST API, requests, JSON parsing, charting (pygal, plot.ly), MongoDB,
               bootstrap, deployment to server</i>.
             <div class="row">
@@ -2778,7 +2896,7 @@
         <h4><a name="interests">Interests/About me</a></h4>
         I’m 35, I was born and live in Ukraine (<a
           href="https://www.google.com.ua/maps/@49.4413417,32.0787871,13.25z?hl=en">Cherkasy</a>). I came to coding from
-        biology (have <a href="https://cdu.edu.ua/en/">master’s degree in human physiology, unfinished PhD</a>; while
+        biology (have a <a href="https://cdu.edu.ua/en/">master’s degree in human physiology, unfinished PhD</a>; while
         studying at school and university was a winner of All-Ukrainian Biological Olympiads). I have >10-years of
         experience as an English>Russian medical translator [<a href="http://medconsult.ru/">TA Medconsult</a>]),
         translated for Novartis, Pfizer, Roche, Bristol-Myers Squibb, Sanofi, Regeneron Pharmaceuticals etc.
@@ -2788,7 +2906,7 @@
         <br>From September 18, 2018 work as a chatbot developer (node.js) at <a href="https://masterofcode.com/"
           target="_blank">Master of Code</a>.
         <br><br>
-        Visual timeline of my education and jobs is as follows:
+        A visual timeline of my education and jobs is as follows:
         <br>
         <a href="public/img/visual_cv.jpg" target="_blank"><img src="public/img/visual_cv.jpg"
             class="img-fluid img-thumbnail"></a>
